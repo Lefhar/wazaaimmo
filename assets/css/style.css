@@ -22,6 +22,33 @@ footer {
 .dropdown-submenu {
     position: relative;
 }
+.dropdown-submenu>li>a {
+    background-color: #59bfff;
+    color : #f0f0f0;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+
+    text-decoration: none;
+    background-color: #59bfff;
+    color : #f0f0f0;
+}
+.dropdown-submenu>li>a:hover {
+    background-color: #59bfff;
+    color : #f0f0f0;
+}
+.dropdown-item:active {
+    background-color: #59bfff;
+    color : #f0f0f0;
+}
+    .dropdown-item>a {
+    background-color: #59bfff;
+    color : #f0f0f0;
+}
+.dropdown-item>a:hover {
+    background-color: #59bfff;
+    color : #424040;
+}
+
 .bg-perso {
     background-color: #426982;
     color : #f0f0f0;
@@ -40,15 +67,15 @@ footer {
     color : #f0f0f0;
 }
 
-.navbar-jarditou a{
+.navbar-perso a{
     color : #f0f0f0;
 
 }
-.dropdown-item-jarditou a{
+.dropdown-item-perso a{
  color: #ffffff;
 }
 
-.dropdown-item-jarditou li{
+.dropdown-item-perso li{
     color: #ffffff;
 }
 .custom-toggler .navbar-toggler-icon {
@@ -107,7 +134,9 @@ footer {
 .counter span.warning{
     color:red;
 }
-
+.nav-link{
+    color:white; 
+}
 .bloque {
     color:white;
     background-color: red;

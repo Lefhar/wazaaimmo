@@ -20,7 +20,7 @@
 
        <!--  barre du menu
     -->
-    <nav class="navbar navbar-expand-lg navbar-jarditou bg-perso">
+    <nav class="navbar navbar-expand-lg navbar-perso bg-perso">
             <!--bouton sur mobile-->
             <a class="nav-brand navbar-text" href=""> <img src="<?php echo base_url("assets/images/wazaa_logo.png"); ?>"  class="img-fluid" alt="Wazaa immo" title="Wazaa immo"  width="60"></a>
               <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

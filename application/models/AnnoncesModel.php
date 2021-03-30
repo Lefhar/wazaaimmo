@@ -12,11 +12,11 @@ class AnnoncesModel extends CI_Model
                 // Exécute la requête 
                 if(!empty($champs)&&$champs =='cat'&&$order =='asc')
                 {
-                      $order = "order by opt_libelle asc";
+                      $order = "order by cat_libelle asc";
                 }
                 elseif(!empty($champs)&&$champs =='cat'&&$order =='desc')
                 {
-                  $order = "order by opt_libelle desc";
+                  $order = "order by cat_libelle desc";
                 }
                 elseif(!empty($champs)&&$champs =='prix'&&$order =='asc')
                 {

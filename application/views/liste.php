@@ -1,4 +1,32 @@
+<div class="dropdown m-2 ">
+          <button class="btn btn-bg-perso dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Trier par
+          </button>
+          <ul class="dropdown-menu btn-bg-perso" role="menu" aria-labelledby="dropdownMenu">
+            <li class="dropdown-submenu">
+              <a class="dropdown-item" tabindex="-1" href="#">Catégorie</a>
+              <ul class="dropdown-menu btn-bg-perso" >
+                <li class="dropdown-item dropdown-item-perso"><a tabindex="-1" href="<?php echo site_url('produits/liste/cat/asc');?>">Croissant</a></li>
+                <li class="dropdown-item dropdown-item-perso"><a tabindex="-1" href="<?php echo site_url('produits/liste/cat/desc');?>">Décroissant</a></li>
+              </ul>
+            </li>
+        
+		
+            <li class="dropdown-submenu ">
+              <a class="dropdown-item" tabindex="-1" href="#">Prix</a>
+              <ul class="dropdown-menu btn-bg-perso">
+                <li class="dropdown-item btn-bg-perso"><a tabindex="-1" href="<?php echo site_url('produits/liste/prix/asc');?>">Croissant</a></li>
+                <li class="dropdown-item btn-bg-perso"><a tabindex="-1" href="<?php echo site_url('produits/liste/prix/desc');?>">Décroissant</a></li>
+              </ul>
+            </li>
+         </ul>
+                    <?php if(!empty($this->session->login)){?>
+         <a class="btn btn-bg-perso float-right" href="<?php echo site_url('produits/ajouter');?>">Ajouter un produit</a>
+                    <?php } ?>
+        </div>
+
 <div class="row pt-2 mx-0 mb-1">
+
 <?php if(!empty($liste_produits)) {  
    //var_dump($liste_produits); 
     //exit();
