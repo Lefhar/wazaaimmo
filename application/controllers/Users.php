@@ -37,8 +37,9 @@ class Users extends CI_Controller {
         */
         $aView =  $this->usersModel->connexion();
 
-       
-          $this->load->view('header');
+        $aViewHeader['user'] = $this->usersModel->getUser();
+    
+        $this->load->view('header',$aViewHeader);
           $this->load->view('connexion',$aView);
          $this->load->view('footer');
 	}
@@ -59,9 +60,9 @@ class Users extends CI_Controller {
         * remarque la syntaxe $this->nomModele->methode()
         */
         $aView =  $this->usersModel->inscription();
-
-       
-        $this->load->view('header');
+        $aViewHeader['user'] = $this->usersModel->getUser();
+    
+        $this->load->view('header',$aViewHeader);
         $this->load->view('inscription',$aView);
        $this->load->view('footer');
     }
@@ -80,7 +81,9 @@ class Users extends CI_Controller {
         $aView =  $this->usersModel->deconnexion();
 
        
-        $this->load->view('header');
+        $aViewHeader['user'] = $this->usersModel->getUser();
+    
+        $this->load->view('header',$aViewHeader);
         $this->load->view('deconnexion',$aView);
        $this->load->view('footer');
 	}
@@ -103,8 +106,9 @@ class Users extends CI_Controller {
         */
      
 
-       
-        $this->load->view('header');
+        $aViewHeader['user'] = $this->usersModel->getUser();
+    
+        $this->load->view('header',$aViewHeader);
         $this->load->view('inscriptionvalide');
        $this->load->view('footer');
 	}
@@ -126,7 +130,9 @@ class Users extends CI_Controller {
         * remarque la syntaxe $this->nomModele->methode()
         */
         $aView =  $this->usersModel->validationemail($this->uri->segment(3));
-        $this->load->view('header');
+        $aViewHeader['user'] = $this->usersModel->getUser();
+    
+        $this->load->view('header',$aViewHeader);
         $this->load->view('validationemail', $aView);
         $this->load->view('footer');
     }
@@ -148,7 +154,9 @@ class Users extends CI_Controller {
         * remarque la syntaxe $this->nomModele->methode()
         */
         $aView =  $this->usersModel->resetpassword($this->uri->segment(3));
-        $this->load->view('header');
+        $aViewHeader['user'] = $this->usersModel->getUser();
+    
+        $this->load->view('header',$aViewHeader);
         $this->load->view('resetpassword', $aView);
         $this->load->view('footer');
     }
@@ -172,7 +180,9 @@ class Users extends CI_Controller {
         $aView =  $this->usersModel->lostpassword();
 
        
-        $this->load->view('header');
+        $aViewHeader['user'] = $this->usersModel->getUser();
+    
+        $this->load->view('header',$aViewHeader);
         $this->load->view('lostpassword',$aView);
        $this->load->view('footer');
     }
@@ -195,8 +205,10 @@ class Users extends CI_Controller {
         */
         $aView =  $this->usersModel->resendemail();
 
-       
-        $this->load->view('header');
+  
+        $aViewHeader['user'] = $this->usersModel->getUser();
+    
+        $this->load->view('header',$aViewHeader);
         $this->load->view('resendemail',$aView);
        $this->load->view('footer');
     }

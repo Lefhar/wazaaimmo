@@ -86,7 +86,7 @@ class usersModel extends CI_Model
                 $data["wi_jeton_connect"] = $jeton;
                 $data["wi_essai_connect"] = 0;
                 $this->db->where('wi_mail', $email);
-                $this->db->update('users', $data);
+                $this->db->update('wi_users', $data);
                 $this->session->set_userdata(array('login' => $email, 'jeton' => $jeton));
                 if (!empty($this->input->post('remember')) && $this->input->post('remember') == "on") {
                     $cookie = array(
@@ -284,7 +284,7 @@ class usersModel extends CI_Model
                 $data['wi_mail_confirm'] = "1";
                 $data['wi_mail_hash'] = NULL;
                 $this->db->where('wi_id', $id);
-                $this->db->update('users', $data);
+                $this->db->update('wi_users', $data);
                 $data['error'] = '<div class="alert alert-success" role="alert">Merci votre email est validé vous pouvez vous  <a href="' . site_url('users/connexion') . '">connecter</a></div>';
 
                 //redirect('users/connexion');
@@ -315,7 +315,7 @@ class usersModel extends CI_Model
         $aViewHeader = ["title" => "Déconnexion", "user" => $aViewHeader];
   
         //removing session  
-        $this->load->view('deconnexion');
+
         if (
             !empty($this->input->post('confirm'))
             &&

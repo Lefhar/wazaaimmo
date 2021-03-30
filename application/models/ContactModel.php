@@ -21,7 +21,7 @@ class contactModel extends CI_Model
         $aViewHeader = ["title" => "Nous contacter","user" => $aViewHeader];
         // Chargement de la librairie form_validation
         $this->load->library('form_validation');
-        $this->load->view('header', $aViewHeader);
+   
         $this->load->library('email');
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email', array("required" => "<div class=\"alert alert-danger\" role=\"alert\">%s est obligatoire.</div>", "valid_email" => "<div class=\"alert alert-danger\" role=\"alert\">ce n'est pas une adresse %s valide.</div>"));
         $this->form_validation->set_rules('prenom', 'Prenom', 'required|regex_match[`^[a-zA-Z]{2,}$`]', array("regex_match" => "<div class=\"alert alert-danger\" role=\"alert\">ce n'est pas un %s correct.</div>"));
@@ -44,7 +44,7 @@ class contactModel extends CI_Model
         }
         if ($this->form_validation->run() == false)
         {
-            $this->load->view('contact');
+        
 
         }else{
 
@@ -108,7 +108,7 @@ class contactModel extends CI_Model
 
 redirect('contact/sendok');
         }
-        $this->load->view('footer');
+        
     }
 
 
@@ -123,10 +123,8 @@ redirect('contact/sendok');
             $aViewHeader = $this->usersModel->getUser();
             $aViewHeader = ["title" => "Message envoyé","user" => $aViewHeader];
             $data['error']= '<div class="alert alert-success" role="alert">Votre email à bien était envoyé</div>';
-            $this->load->view('header', $aViewHeader);
-            $this->load->view('contact',$data);
-            $this->load->view('footer');
 
+return $data;
     }
 
 }

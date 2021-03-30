@@ -69,9 +69,9 @@
 
                 <form class="form-inline ml-auto">
                   <div class="md-form my-0">
-                    <input class="form-control" id="search"  name="search" type="text" placeholder="Votre promotion" aria-label="Search">
+                    <input class="form-control" id="search"  name="search" type="text" placeholder="Rechercher un bien" aria-label="Search">
                   </div>
-                  <button class="btn btn-outline-light btn-md my-0 ml-sm-2" type="submit">Rechercher</button>
+                  <button class="btn btn-bg-perso btn-outline-perso btn-md my-0 ml-sm-2" type="submit">Rechercher</button>
                 </form>
             
               </div>

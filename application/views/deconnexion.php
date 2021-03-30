@@ -21,9 +21,9 @@
 
         echo '<div class="form-group">';
         //bouton Confirmation
-         echo form_submit('', 'Confirmer', 'class="btn btn-jarditou btn-lg"');
+         echo form_submit('', 'Confirmer', 'class="btn btn-bg-perso btn-lg"');
          //bouton pour réinitialiser 
-         echo form_reset('', 'Annuler', 'class="btn btn-danger btn-lg"','onclick="location.href = \''.site_url("produits/liste").'\';"' );
+         echo form_reset('', 'Annuler', 'class="btn btn-danger btn-lg"','onclick="location.href = \''.site_url("annonces/liste").'\';"' );
         echo ' </div>
         <!--balise form fin du formulaire-->';
         echo  form_fieldset_close();

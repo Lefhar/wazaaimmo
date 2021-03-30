@@ -21,7 +21,7 @@
             </li>
          </ul>
                     <?php if(!empty($this->session->login)){?>
-         <a class="btn btn-bg-perso float-right" href="<?php echo site_url('produits/ajouter');?>">Ajouter un produit</a>
+         <a class="btn btn-bg-perso float-right" href="<?php echo site_url('produits/ajouter');?>">Ajouter un bien</a>
                     <?php } ?>
         </div>
 

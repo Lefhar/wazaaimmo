@@ -481,3 +481,31 @@ ERROR - 2021-03-30 15:05:57 --> Severity: Notice --> Trying to get property 'pic
 ERROR - 2021-03-30 15:46:55 --> Query error: La table 'wazaa_immo.users' n'existe pas - Invalid query: SELECT wi_mail FROM users WHERE wi_mail = 's.lefebvre907@laposte.net'
 ERROR - 2021-03-30 15:59:13 --> Severity: error --> Exception: Call to undefined method usersModel::inscriptionvalide() C:\wamp64\racine\wazaaimmo\application\controllers\Users.php 104
 ERROR - 2021-03-30 15:59:50 --> Severity: Notice --> Undefined variable: aView C:\wamp64\racine\wazaaimmo\application\models\UsersModel.php 255
+ERROR - 2021-03-30 16:56:29 --> Query error: La table 'wazaa_immo.users' n'existe pas - Invalid query: UPDATE `users` SET `wi_mail_confirm` = '1', `wi_mail_hash` = NULL
+WHERE `wi_id` = '0'
+ERROR - 2021-03-30 16:58:12 --> Query error: La table 'wazaa_immo.users' n'existe pas - Invalid query: UPDATE `users` SET `wi_d_connect` = '2021-03-30 16:58:12', `wi_jeton_connect` = '$2y$10$lEO4Fv4Oo.pP3giM4gGMUe/3JDTJcoOd2wtjt2mt4MbOvMuT41VvG', `wi_essai_connect` = 0
+WHERE `wi_mail` = 's.lefebvre907@laposte.net'
+ERROR - 2021-03-30 17:02:01 --> Severity: error --> Exception: syntax error, unexpected '<', expecting end of file C:\wamp64\racine\wazaaimmo\application\views\header.php 3
+ERROR - 2021-03-30 17:02:02 --> Severity: error --> Exception: syntax error, unexpected '<', expecting end of file C:\wamp64\racine\wazaaimmo\application\views\header.php 3
+ERROR - 2021-03-30 17:02:03 --> Severity: error --> Exception: syntax error, unexpected '<', expecting end of file C:\wamp64\racine\wazaaimmo\application\views\header.php 3
+ERROR - 2021-03-30 17:02:08 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:02:08 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:02:09 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:02:59 --> Severity: error --> Exception: syntax error, unexpected 'public' (T_PUBLIC) C:\wamp64\racine\wazaaimmo\application\models\UsersModel.php 24
+ERROR - 2021-03-30 17:02:59 --> Severity: error --> Exception: syntax error, unexpected 'public' (T_PUBLIC) C:\wamp64\racine\wazaaimmo\application\models\UsersModel.php 24
+ERROR - 2021-03-30 17:03:00 --> Severity: error --> Exception: syntax error, unexpected 'public' (T_PUBLIC) C:\wamp64\racine\wazaaimmo\application\models\UsersModel.php 24
+ERROR - 2021-03-30 17:03:17 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:03:17 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:03:18 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:04:07 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:04:07 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:04:08 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:06:00 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:06:00 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:06:01 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:06:22 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:06:23 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:06:24 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\views\header.php 2
+ERROR - 2021-03-30 17:15:58 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\controllers\Contact.php 63
+ERROR - 2021-03-30 17:17:36 --> Severity: Notice --> Undefined variable: aViewHeader C:\wamp64\racine\wazaaimmo\application\controllers\Contact.php 63
+ERROR - 2021-03-30 17:18:09 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\application\views\contact.php 123

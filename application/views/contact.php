@@ -113,7 +113,7 @@ if(empty($error)){
                     </div>
 
                     <div class="form-group">
-                        <button type="submit"  class="btn btn-dark btn-lg">Envoyer</button>    <button type="reset" class="btn btn-dark btn-lg">Annuler</button>
+                        <button type="submit"  class="btn btn-bg-perso btn-lg">Envoyer</button>    <button type="reset" class="btn btn-danger btn-lg">Annuler</button>
                     </div>
           <?php  echo  form_fieldset_close();
 }else {?>

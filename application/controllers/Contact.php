@@ -30,12 +30,17 @@ class Contact extends CI_Controller {
     {
         $this->load->model('usersModel');
         $this->load->model('contactModel');
-
+        $aViewHeader['user'] = $this->usersModel->getUser();
+    
+     
         /* On appelle la méthode liste() du modèle,
         * qui retourne le tableau de résultat ici affecté dans la variable $aListe (un tableau)
         * remarque la syntaxe $this->nomModele->methode()
         */
       $this->contactModel->index();
+      $this->load->view('header',$aViewHeader);
+      $this->load->view('contact');
+      $this->load->view('footer');
     }
 
     /**
@@ -49,11 +54,14 @@ class Contact extends CI_Controller {
 
         $this->load->model('usersModel');
         $this->load->model('contactModel');
-
+        $aViewHeader['user'] = $this->usersModel->getUser();
         /* On appelle la méthode liste() du modèle,
         * qui retourne le tableau de résultat ici affecté dans la variable $aListe (un tableau)
         * remarque la syntaxe $this->nomModele->methode()
         */
-         $this->contactModel->sendok();
+        $data =   $this->contactModel->sendok();
+         $this->load->view('header',$aViewHeader);
+         $this->load->view('contact',$data);
+         $this->load->view('footer');
     }
 }

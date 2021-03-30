@@ -71,7 +71,7 @@ if(!empty($error))
   
             
         <div class="form-group">
-              <button type="submit"  class="btn btn-jarditou btn-lg">Connexion</button>    <button type="reset" class="btn btn-dark btn-lg">Annuler</button>
+              <button type="submit"  class="btn btn-bg-perso btn-lg">Connexion</button>    <button type="reset" class="btn btn-dark btn-lg">Annuler</button>
          </div>
 
      </form> <!--balise form fin du formulaire-->
