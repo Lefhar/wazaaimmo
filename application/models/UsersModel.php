@@ -76,7 +76,7 @@ class usersModel extends CI_Model
         $aViewHeader = ["title" => "Connexion"];
 
         // Appel des différents morceaux de vues
-        $this->load->view('header', $aViewHeader);
+   
         if ($this->form_validation->run() == TRUE) {
             if (!empty($aView["users"]->wi_mail) && password_verify($this->functionModel->password($password, $aView["users"]->wi_hash), $aView["users"]->wi_password)&&$aView["users"]->wi_mail_confirm==1) {
 
@@ -100,19 +100,19 @@ class usersModel extends CI_Model
                     );
                     $this->input->set_cookie($cookie);
                 }
-                redirect("produits/liste");
+                redirect("annonces/liste");
 
             }elseif ($aView["users"]->wi_mail_confirm==0){
                 $aView['error'] = '<div class="alert alert-danger" role="alert">Vous devez valider votre adresse email <a href="' . site_url('users/resendemail') . '">renvoyer</a></div>';
-                $this->load->view('connexion', $aView);
+            
             } else {
                 $aView['error'] = '<div class="alert alert-danger" role="alert">Email ou mot de passe faux</div>';
-                $this->load->view('connexion', $aView);
+               
             }
         } else {
-            $this->load->view('connexion', $aView);
+         
         }
-        $this->load->view('footer');
+    return $aView;
     }
 
 
@@ -126,7 +126,7 @@ class usersModel extends CI_Model
     {
 
         $this->load->helper('form', 'url');
-
+        $aView[]="";
         //recupération des données post
         $salt = $this->functionModel->salt(12);
         //$data = $this->input->post();
@@ -172,17 +172,17 @@ class usersModel extends CI_Model
 
 
         if (!empty($this->session->login) && !empty($this->session->jeton)) {
-            redirect('produits/liste');
+            redirect('annonces/liste');
             exit();
         }
         if ($this->form_validation->run() == TRUE) {
 
-            $users = $this->db->query("SELECT wi_mail FROM users WHERE wi_mail = ?", $this->input->post('email'));
+            $users = $this->db->query("SELECT wi_mail FROM wi_users WHERE wi_mail = ?", $this->input->post('email'));
             $aView["users"] = $users->row();
             if (!empty($this->input->post('password')) && !empty($this->input->post('confirpassword')) && $this->input->post('confirpassword') == $this->input->post('password') && empty($aView["users"]->wi_mail)) {
 
 
-                $this->db->insert('users', $data);
+                $this->db->insert('wi_users', $data);
 
 
                 $this->load->library('email');
@@ -244,18 +244,15 @@ class usersModel extends CI_Model
                     } else {
                         $aView['error'] = '<div class="alert alert-danger" role="alert">Une erreur c\'est produite</div>';
                     }
-                $this->load->view('header');
-                $this->load->view('inscription', $aView);
-                $this->load->view('footer');
+ 
 
             }
 
         } else {
 
-            $this->load->view('header');
-            $this->load->view('inscription');
-            $this->load->view('footer');
+      
         }
+        return $aView;
     }
 
 
@@ -289,25 +286,19 @@ class usersModel extends CI_Model
                 $this->db->where('wi_id', $id);
                 $this->db->update('users', $data);
                 $data['error'] = '<div class="alert alert-success" role="alert">Merci votre email est validé vous pouvez vous  <a href="' . site_url('users/connexion') . '">connecter</a></div>';
-                $this->load->view('header');
-                $this->load->view('validationemail', $data);
-                $this->load->view('footer');
+
                 //redirect('users/connexion');
             } else {
                 $data['error'] = '<div class="alert alert-danger" role="alert">Désolé une erreur c\'est produite</div>';
-                $this->load->view('header');
-                $this->load->view('validationemail', $data);
-                $this->load->view('footer');
+
             }
         } else {
 
             $data['error'] = '<div class="alert alert-danger" role="alert">Désolé une erreur c\'est produite</div>';
-            $this->load->view('header');
-            $this->load->view('validationemail', $data);
-            $this->load->view('footer');
+
         }
 
-
+        return $data;
     }
 
 
@@ -322,7 +313,7 @@ class usersModel extends CI_Model
 
         $aViewHeader = $this->usersModel->getUser();
         $aViewHeader = ["title" => "Déconnexion", "user" => $aViewHeader];
-        $this->load->view('header', $aViewHeader);
+  
         //removing session  
         $this->load->view('deconnexion');
         if (
@@ -336,9 +327,9 @@ class usersModel extends CI_Model
             $_SESSION['login'] = "";
             $_SESSION['jeton'] = "";
             session_destroy();
-            redirect("produits/liste");
+            redirect("annonces/liste");
         }
-        $this->load->view('footer');
+        return $aViewHeader;
     }
 
 
@@ -348,13 +339,7 @@ class usersModel extends CI_Model
      * \author Harold lefebvre
      * \date 01/02/2021
      */
-    public function inscriptionvalide()
-    {
 
-        $this->load->view('header');
-        $this->load->view('inscriptionvalide');
-        $this->load->view('footer');
-    }
 
 
     /**
@@ -423,9 +408,7 @@ class usersModel extends CI_Model
 
         if ($this->form_validation->run() == FALSE) {
 
-            $this->load->view('header', $aViewHeader);
-            $this->load->view('lostpassword');
-            $this->load->view('footer');
+  
         } else {
             if(!empty($aView["jeton"]->wi_mail)) {
                 $id = $aView["jeton"]->wi_id;
@@ -481,18 +464,15 @@ class usersModel extends CI_Model
                         </html>");
                 $this->email->send();
                 $data['error'] = '<div class="alert alert-success" role="alert">Merci un email vous a été envoyé vérifier votre boite de reception ou courrier indésirable</div>';
-                $this->load->view('header', $aViewHeader);
-                $this->load->view('lostpassword',$data);
-                $this->load->view('footer');
+   
             }else{
                 $data['error'] = '<div class="alert alert-danger" role="alert">Veuillez vérifier votre adresse email</div>';
-                $this->load->view('header', $aViewHeader);
-                $this->load->view('lostpassword',$data);
-                $this->load->view('footer');
+
             }
 
 
         }
+        return $data;
     }
 
     /**

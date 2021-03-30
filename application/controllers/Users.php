@@ -35,7 +35,12 @@ class Users extends CI_Controller {
         * qui retourne le tableau de résultat ici affecté dans la variable $aListe (un tableau) 
         * remarque la syntaxe $this->nomModele->methode()       
         */
-        $this->usersModel->connexion();
+        $aView =  $this->usersModel->connexion();
+
+       
+          $this->load->view('header');
+          $this->load->view('connexion',$aView);
+         $this->load->view('footer');
 	}
 
     /**
@@ -53,7 +58,12 @@ class Users extends CI_Controller {
         * qui retourne le tableau de résultat ici affecté dans la variable $aListe (un tableau)
         * remarque la syntaxe $this->nomModele->methode()
         */
-        $this->usersModel->inscription();
+        $aView =  $this->usersModel->inscription();
+
+       
+        $this->load->view('header');
+        $this->load->view('inscription',$aView);
+       $this->load->view('footer');
     }
 
     /**
@@ -67,7 +77,12 @@ class Users extends CI_Controller {
         // Chargement du modèle 'produitsModel'
         $this->load->model('usersModel');
 
-       $this->usersModel->deconnexion();
+        $aView =  $this->usersModel->deconnexion();
+
+       
+        $this->load->view('header');
+        $this->load->view('deconnexion',$aView);
+       $this->load->view('footer');
 	}
 
 
@@ -86,7 +101,12 @@ class Users extends CI_Controller {
         * qui retourne le tableau de résultat ici affecté dans la variable $aListe (un tableau)
         * remarque la syntaxe $this->nomModele->methode()
         */
-       $this->usersModel->inscriptionvalide();
+     
+
+       
+        $this->load->view('header');
+        $this->load->view('inscriptionvalide');
+       $this->load->view('footer');
 	}
 
 
@@ -105,7 +125,10 @@ class Users extends CI_Controller {
         * qui retourne le tableau de résultat ici affecté dans la variable $aListe (un tableau)
         * remarque la syntaxe $this->nomModele->methode()
         */
-        $this->usersModel->validationemail($this->uri->segment(3));
+        $aView =  $this->usersModel->validationemail($this->uri->segment(3));
+        $this->load->view('header');
+        $this->load->view('validationemail', $aView);
+        $this->load->view('footer');
     }
 
 
@@ -124,7 +147,10 @@ class Users extends CI_Controller {
         * qui retourne le tableau de résultat ici affecté dans la variable $aListe (un tableau)
         * remarque la syntaxe $this->nomModele->methode()
         */
-        $this->usersModel->resetpassword($this->uri->segment(3));
+        $aView =  $this->usersModel->resetpassword($this->uri->segment(3));
+        $this->load->view('header');
+        $this->load->view('resetpassword', $aView);
+        $this->load->view('footer');
     }
 
 
@@ -143,7 +169,12 @@ class Users extends CI_Controller {
         * qui retourne le tableau de résultat ici affecté dans la variable $aListe (un tableau)
         * remarque la syntaxe $this->nomModele->methode()
         */
-        $this->usersModel->lostpassword();
+        $aView =  $this->usersModel->lostpassword();
+
+       
+        $this->load->view('header');
+        $this->load->view('lostpassword',$aView);
+       $this->load->view('footer');
     }
 
 
@@ -162,6 +193,11 @@ class Users extends CI_Controller {
         * qui retourne le tableau de résultat ici affecté dans la variable $aListe (un tableau)
         * remarque la syntaxe $this->nomModele->methode()
         */
-        $this->usersModel->resendemail();
+        $aView =  $this->usersModel->resendemail();
+
+       
+        $this->load->view('header');
+        $this->load->view('resendemail',$aView);
+       $this->load->view('footer');
     }
 }

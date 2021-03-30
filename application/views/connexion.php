@@ -9,7 +9,7 @@
     <!-- 
         colonne central
     -->
-      <div class="col-12">
+      <div class="col-12 p-2">
       <article>
          <p>* Ces zones sont obligatoires</p>
 
