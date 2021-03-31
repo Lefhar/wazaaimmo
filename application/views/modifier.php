@@ -64,9 +64,12 @@
          '.form_label('Image', 'an_photo',$data).'
          <div class="col-sm-10 col-12"> ';
         //input pro Image
-         $data = array('name' => 'an_photo','id' => 'an_photo','class' => 'form-control-file','type' => 'file','value' => ''.set_value('an_photo',$infoprod["an_id"].'.'.$infoprod["an_photo"]).'');
+         $data = array('name' => 'an_photo','id' => 'an_photo','class' => 'form-control-file','type' => 'file[]');
         // echo form_upload($data).'';
-        echo '<img  class="img-fluid" width="100" src="'.base_url("assets/images/".$infoprod["an_id"].".".$infoprod["an_photo"]).'" alt="'.$infoprod["an_libelle"].'"><br>
+        foreach($infoprod["photo"] as $img){
+        echo '<img  class="img-fluid" width="100" src="'.base_url('assets/images/annonce_'.$img->pic_an_id.'/'.$img->pic_an_id.'-'.$img->pic_id.'.'.$img->pic_ext).'" alt="'.$infoprod["an_titre"].'">';
+    }
+        echo'</br>
         <a class="btn btn-info btn-lg" onclick="add_fields();" >Modifier</a>
         <div id="img" > </div>';
         echo form_error('an_photo').'';

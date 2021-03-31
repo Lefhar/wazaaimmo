@@ -805,7 +805,7 @@ let confirpassword = false
      function add_fields() {
         var d = document.getElementById("img");
      
-        d.innerHTML = '<br><input type="file" name="pro_photo" id="pro_photo" class="form-control-file" >';
+        d.innerHTML = '<br><input type="file" name="pro_photo" id="pro_photo" class="form-control-file" multiple>';
      }
 
 
