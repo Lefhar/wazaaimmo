@@ -10,7 +10,7 @@
 
 
  <legend> Formulaire de modification de <?php
- var_dump($infoprod);
+ //var_dump($infoprod);
  if(!empty($infoprod)){echo $infoprod["an_titre"];?> </legend>
      <?php 
      
@@ -64,9 +64,9 @@
          '.form_label('Image', 'an_photo',$data).'
          <div class="col-sm-10 col-12"> ';
         //input pro Image
-         $data = array('name' => 'an_photo','id' => 'an_photo','class' => 'form-control-file','type' => 'file','value' => ''.set_value('an_photo',$produit["an_id"].'.'.$produit["an_photo"]).'');
+         $data = array('name' => 'an_photo','id' => 'an_photo','class' => 'form-control-file','type' => 'file','value' => ''.set_value('an_photo',$infoprod["an_id"].'.'.$infoprod["an_photo"]).'');
         // echo form_upload($data).'';
-        echo '<img  class="img-fluid" width="100" src="'.base_url("assets/images/".$produit["an_id"].".".$produit["an_photo"]).'" alt="'.$produit["an_libelle"].'"><br>
+        echo '<img  class="img-fluid" width="100" src="'.base_url("assets/images/".$infoprod["an_id"].".".$infoprod["an_photo"]).'" alt="'.$infoprod["an_libelle"].'"><br>
         <a class="btn btn-info btn-lg" onclick="add_fields();" >Modifier</a>
         <div id="img" > </div>';
         echo form_error('an_photo').'';
@@ -82,7 +82,7 @@
          '.form_label('Prix', 'an_prix',$data).'
          <div class="col-sm-10 col-12"> ';
         //input Prix
-         $data = array('name' => 'an_prix','id' => 'an_prix','class' => 'form-control','step' => 'any','type' => 'number','value' => ''.set_value('an_prix',$produit["an_prix"]).'');
+         $data = array('name' => 'an_prix','id' => 'an_prix','class' => 'form-control','step' => 'any','type' => 'number','value' => ''.set_value('an_prix',$infoprod["an_prix"]).'');
         echo form_input($data).'
         '.form_error('an_prix').'
         </div>
@@ -95,7 +95,7 @@
          '.form_label('Stock', 'an_stock',$data).'
          <div class="col-sm-10 col-12"> ';
         //input stock
-         $data = array('name' => 'an_stock','id' => 'an_stock','class' => 'form-control','type' => 'number', 'value' => ''.set_value('an_stock',$produit["an_stock"]).'');
+         $data = array('name' => 'an_stock','id' => 'an_stock','class' => 'form-control','type' => 'number', 'value' => ''.set_value('an_stock',$infoprod["an_stock"]).'');
         echo form_input($data).'
         '.form_error('an_stock').'
         </div>
@@ -104,12 +104,12 @@
 
         //label bloqué
         $data = array('class' => 'col-sm-2 col-form-label col-12');
-        if($produit->an_bloque==1){$bloque = "disabled"; $checked = TRUE; }else{$bloque = "disabled";$checked = FALSE;}
+        if($infoprod->an_bloque==1){$bloque = "disabled"; $checked = TRUE; }else{$bloque = "disabled";$checked = FALSE;}
         echo '<div class="form-group row">'.form_label('Produit bloqué', 'an_bloque',$data).'
         <div class="col-sm-10 col-12">
         <div class="checkbox '.$bloque.'">';
         //input pro bloqué
-         $data = array('name' => 'an_bloque','id' => 'an_bloque','class' => 'form-control','data-toggle' => 'toggle','data-onstyle'=>'danger','data-offstyle'=>'success', 'data-on' => 'Oui', 'data-off' => 'Non', 'value' => ''.set_value('an_bloque',$produit["an_bloque"]).'');
+         $data = array('name' => 'an_bloque','id' => 'an_bloque','class' => 'form-control','data-toggle' => 'toggle','data-onstyle'=>'danger','data-offstyle'=>'success', 'data-on' => 'Oui', 'data-off' => 'Non', 'value' => ''.set_value('an_bloque',$infoprod["an_bloque"]).'');
          echo form_checkbox($data,'',$checked).'
          </div>
           </div>
@@ -121,16 +121,17 @@
         '.form_label('Catégorie', 'cat_id',$data).'
          <div class="col-sm-10 col-12"> ';
         $option = array();//on déclare le tableau
-          if(!empty($categorie)) {
-              foreach ($categorie as $key => $row) {
-
-                  $option[$row->cat_id] = $row->cat_nom;// donné du tableaux
+        
+          if(!empty($categoriestab)) {
+              foreach ($categoriestab as $key => $cat) {
+               //var_dump($row);
+                  $option[$cat["cat_id"]] = $cat["cat_libelle"];// donné du tableaux
               }
           }
         $variable = array('id' => 'cat_id','class' => 'form-control');
         // liste déroulante des catégories
-        echo form_dropdown('an_cat_id',$option,$produit->an_cat_id,$variable).'
-        '.form_error('an_cat_id').'
+        echo form_dropdown('an_type',$option,$infoprod['an_type'],$variable).'
+        '.form_error('an_type').'
         </div>
         </div>  ';
 
@@ -139,7 +140,7 @@
         echo '<div class="form-group row">
         '.form_label('Description produit', 'an_description',$data).'
         <div class="col-sm-10 col-12"> ';
-        $data = array('name' => 'an_description','id' => 'an_description','class' => 'form-control','data-maxlength' => '1000','cols' => '30','rows' => '10','placeholder' => 'description (1000 caractères MAX)','value' => ''.set_value('an_description',$produit["an_description"]).'');
+        $data = array('name' => 'an_description','id' => 'an_description','class' => 'form-control','data-maxlength' => '1000','cols' => '30','rows' => '10','placeholder' => 'description (1000 caractères MAX)','value' => ''.set_value('an_description',$infoprod["an_description"]).'');
        echo form_textarea($data).'
         <div id="an_descriptionError" class="counter"><span>0</span> caractères (1000 max)</div> 
         '.form_error('an_description').'

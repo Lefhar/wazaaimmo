@@ -594,3 +594,596 @@ ERROR - 2021-03-31 14:38:25 --> Severity: Notice --> Undefined variable: produit
 ERROR - 2021-03-31 14:38:25 --> Severity: Notice --> Undefined variable: produit C:\wamp64\racine\wazaaimmo\application\views\modifier.php 132
 ERROR - 2021-03-31 14:38:25 --> Severity: Notice --> Trying to get property 'an_cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 132
 ERROR - 2021-03-31 14:38:25 --> Severity: Notice --> Undefined variable: produit C:\wamp64\racine\wazaaimmo\application\views\modifier.php 142
+ERROR - 2021-03-31 14:56:01 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 14:56:01 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 14:56:01 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 14:56:01 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 14:56:01 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 14:56:01 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 14:56:01 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 14:56:01 --> Severity: Notice --> Trying to get property 'an_cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 132
+ERROR - 2021-03-31 14:57:42 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 14:57:42 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 14:57:42 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 14:57:42 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 14:57:42 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 14:57:42 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 14:57:42 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 14:57:42 --> Severity: Notice --> Trying to get property 'an_cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 132
+ERROR - 2021-03-31 14:58:50 --> Query error: Champ 'an_cat_id' inconnu dans field list - Invalid query: SELECT `an_id`, `an_offre`, `an_type`, `an_opt`, `an_pieces`, `an_ref`, `an_cat_id`, `an_titre`, `an_description`, `an_local`, `an_surf_hab`, `an_surf_tot`, `an_prix`, `an_diagnostic`, `an_d_ajout`, `an_d_modif`
+FROM `annonces`
+WHERE `an_id` = '1'
+ERROR - 2021-03-31 14:59:57 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 14:59:57 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 14:59:57 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 14:59:57 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 14:59:57 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 14:59:57 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 14:59:57 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 14:59:57 --> Severity: Notice --> Trying to get property 'an_type' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 132
+ERROR - 2021-03-31 15:00:40 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:00:40 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:00:40 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:00:40 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:00:40 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:00:40 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:00:40 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:02:10 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:02:10 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:02:10 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:02:10 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:02:10 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:02:10 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:02:10 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:02:31 --> Severity: error --> Exception: syntax error, unexpected 'var' (T_VAR) C:\wamp64\racine\wazaaimmo\application\views\modifier.php 124
+ERROR - 2021-03-31 15:02:38 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:02:38 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:02:38 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:02:38 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:02:38 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:02:38 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:02:38 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:02:38 --> Severity: Notice --> Undefined variable: categorie C:\wamp64\racine\wazaaimmo\application\views\modifier.php 124
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php 66
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:03:36 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:03:59 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:03:59 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:03:59 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:03:59 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:03:59 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:03:59 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:03:59 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:03:59 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:03:59 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:03:59 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:03:59 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:04:13 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:04:13 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:04:13 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:04:13 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:04:13 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:04:13 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:04:13 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:04:13 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:04:13 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:04:13 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:04:13 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:05:55 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:05:55 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:05:55 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:05:55 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:05:55 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:05:55 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:05:55 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:05:55 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:05:55 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:05:55 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:05:55 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Undefined property: stdClass::$cat_libelle C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 38
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:06:58 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:07:44 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:07:44 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:07:44 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:07:44 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:07:44 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:07:44 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:07:44 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:07:44 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:07:44 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:07:44 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:07:44 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:08:44 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:08:44 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:08:44 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:08:44 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:08:44 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:08:44 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:08:44 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:08:44 --> Severity: Notice --> Undefined variable: categorie C:\wamp64\racine\wazaaimmo\application\views\modifier.php 124
+ERROR - 2021-03-31 15:09:07 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:09:07 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:09:07 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:09:07 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:09:07 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:09:07 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:09:07 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:09:27 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:09:27 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:09:27 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:09:27 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:09:27 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:09:27 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:09:27 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:09:35 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:09:35 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:09:35 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:09:35 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:09:35 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:09:35 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:09:35 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:10:18 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:10:18 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:10:18 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:10:18 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:10:18 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:10:18 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:10:18 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:10:18 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:10:18 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:10:18 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:10:18 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:10:28 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:10:28 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:10:28 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:10:28 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:10:28 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:10:28 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:10:28 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:10:28 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:10:28 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:10:28 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:10:28 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:19 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:11:19 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:11:19 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:11:19 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:11:19 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:11:19 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:11:19 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:11:19 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:19 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:19 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:19 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 127
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 127
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:37 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Undefined index: cat_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 127
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:11:50 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 127
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 127
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:12:42 --> Severity: Notice --> Trying to get property 'cat_libelle' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:13:09 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:13:09 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:13:09 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:13:09 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:13:09 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:13:09 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:13:09 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:13:09 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:13:09 --> Severity: Notice --> Trying to get property 'cat_id' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:13:09 --> Severity: Notice --> Undefined index: cat_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:13:29 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:13:29 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:13:29 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:13:29 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:13:29 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:13:29 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:13:29 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:13:29 --> Severity: Notice --> Undefined index: cat_id C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:13:29 --> Severity: Notice --> Undefined index: cat_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:14:34 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:14:34 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:14:34 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:14:34 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:14:34 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:14:34 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:14:34 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:14:34 --> Severity: Notice --> Undefined index: cat_id C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:14:34 --> Severity: Notice --> Undefined index: cat_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:15:37 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:15:37 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:15:37 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:15:37 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:15:37 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:15:37 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:15:37 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:15:37 --> Severity: Notice --> Undefined index: cat_id C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:15:37 --> Severity: Notice --> Undefined index: cat_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:15:45 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:15:45 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:15:45 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:15:45 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:15:45 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:15:45 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:15:45 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:15:45 --> Severity: Notice --> Undefined index: cat_id C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:15:45 --> Severity: Notice --> Undefined index: cat_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:17:40 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:17:40 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:17:40 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:17:40 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:17:40 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:17:40 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:17:40 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:17:40 --> Severity: Notice --> Undefined index: cat_id C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:17:40 --> Severity: Notice --> Undefined index: cat_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:18:08 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:18:08 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:18:08 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:18:08 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:18:08 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:18:08 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:18:08 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:18:08 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:18:39 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:18:39 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:18:39 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:18:39 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:18:39 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:18:39 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:18:39 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:18:39 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:19:08 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:19:08 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:19:08 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:19:08 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:19:08 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:19:08 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:19:08 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:19:08 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:19:37 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:19:37 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:19:37 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:19:37 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:19:37 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:19:37 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:19:37 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:19:37 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:19:53 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:19:53 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:19:53 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:19:54 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:19:54 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:19:54 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:19:54 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:19:54 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:20:16 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:20:16 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:20:16 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:20:16 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:20:16 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:20:16 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:20:17 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:20:17 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:20:30 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:20:30 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:20:30 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:20:30 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:20:30 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:20:30 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:20:30 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:20:30 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:21:02 --> Severity: Notice --> Undefined index: categories C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php 62
+ERROR - 2021-03-31 15:21:02 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:21:02 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:21:03 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:21:03 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:21:03 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:21:03 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:21:03 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:21:03 --> Severity: Notice --> Undefined variable: categorie C:\wamp64\racine\wazaaimmo\application\views\modifier.php 124
+ERROR - 2021-03-31 15:21:21 --> Severity: Notice --> Undefined index: categories C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php 62
+ERROR - 2021-03-31 15:21:21 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:21:21 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:21:21 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:21:21 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:21:21 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:21:21 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:21:21 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:21:34 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:21:34 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:21:34 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:21:34 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:21:34 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:21:34 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:21:34 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:21:34 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:21:53 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:21:53 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:21:53 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:21:53 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:21:53 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:21:53 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:21:53 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:21:53 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:21:53 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php:65) C:\wamp64\racine\wazaaimmo\system\core\Common.php 570
+ERROR - 2021-03-31 15:23:20 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:23:20 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:23:20 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:23:20 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:23:20 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:23:20 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:23:20 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:23:20 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:23:20 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php:65) C:\wamp64\racine\wazaaimmo\system\core\Common.php 570
+ERROR - 2021-03-31 15:23:42 --> Severity: Notice --> Undefined offset: 0 C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php 61
+ERROR - 2021-03-31 15:23:42 --> Severity: Notice --> Trying to get property 'pic_an_id' of non-object C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php 67
+ERROR - 2021-03-31 15:23:42 --> Severity: Notice --> Trying to get property 'pic_an_id' of non-object C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php 67
+ERROR - 2021-03-31 15:23:42 --> Severity: Notice --> Trying to get property 'pic_id' of non-object C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php 67
+ERROR - 2021-03-31 15:23:42 --> Severity: Notice --> Trying to get property 'pic_ext' of non-object C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php 67
+ERROR - 2021-03-31 15:24:48 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:24:48 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:24:48 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:24:48 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:24:48 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:24:48 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:24:48 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:24:48 --> Severity: Notice --> Undefined variable: categories C:\wamp64\racine\wazaaimmo\application\views\modifier.php 124
+ERROR - 2021-03-31 15:25:14 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:25:14 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:25:14 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:25:14 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:25:14 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:25:14 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:25:14 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:25:14 --> Severity: Notice --> Undefined variable: categories C:\wamp64\racine\wazaaimmo\application\views\modifier.php 124
+ERROR - 2021-03-31 15:26:16 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:26:16 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:26:16 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:26:16 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:26:16 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:26:16 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:26:16 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:26:16 --> Severity: Notice --> Undefined variable: categories C:\wamp64\racine\wazaaimmo\application\views\modifier.php 126
+ERROR - 2021-03-31 15:26:16 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\racine\wazaaimmo\application\views\modifier.php 126
+ERROR - 2021-03-31 15:26:56 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:26:56 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:26:56 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:26:56 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:26:56 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:26:56 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:26:56 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:26:56 --> Severity: error --> Exception: Cannot use object of type mysqli as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:26:56 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php:65) C:\wamp64\racine\wazaaimmo\system\core\Common.php 570
+ERROR - 2021-03-31 15:27:24 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:27:25 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:27:25 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:27:25 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:27:25 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:27:25 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:27:25 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:27:25 --> Severity: error --> Exception: Cannot use object of type mysqli as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:27:25 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php:65) C:\wamp64\racine\wazaaimmo\system\core\Common.php 570
+ERROR - 2021-03-31 15:27:50 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:27:50 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:27:50 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:27:50 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:27:50 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:27:50 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:27:50 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:27:50 --> Severity: error --> Exception: Cannot use object of type mysqli as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:27:50 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php:65) C:\wamp64\racine\wazaaimmo\system\core\Common.php 570
+ERROR - 2021-03-31 15:28:04 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:28:04 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:28:04 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:28:04 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:28:04 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:28:04 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:28:04 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:28:04 --> Severity: error --> Exception: Cannot use object of type mysqli as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:28:04 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php:65) C:\wamp64\racine\wazaaimmo\system\core\Common.php 570
+ERROR - 2021-03-31 15:29:05 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:29:05 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:29:05 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:29:05 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:29:05 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:29:05 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:29:05 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:29:05 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:30:16 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:30:16 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:30:16 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:30:16 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:30:16 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:30:16 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:30:16 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:30:16 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:30:16 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php:65) C:\wamp64\racine\wazaaimmo\system\core\Common.php 570
+ERROR - 2021-03-31 15:30:27 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:30:27 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:30:27 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:30:27 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:30:27 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:30:27 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:30:27 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:30:27 --> Severity: Notice --> Undefined index: categoriestab C:\wamp64\racine\wazaaimmo\application\views\modifier.php 124
+ERROR - 2021-03-31 15:30:51 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:30:51 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:30:51 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:30:51 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:30:51 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:30:51 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:30:51 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:30:51 --> Severity: Notice --> Undefined index: categoriestab C:\wamp64\racine\wazaaimmo\application\views\modifier.php 124
+ERROR - 2021-03-31 15:31:08 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:31:08 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:31:08 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:31:08 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:31:08 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:31:08 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:31:08 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:31:08 --> Severity: Notice --> Undefined index: categoriestab C:\wamp64\racine\wazaaimmo\application\views\modifier.php 124
+ERROR - 2021-03-31 15:31:43 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:31:43 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:31:43 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:31:43 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:31:44 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:31:44 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:31:44 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:31:57 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:31:57 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:31:57 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:31:57 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:31:57 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:31:57 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:31:57 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:31:57 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:31:57 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php:65) C:\wamp64\racine\wazaaimmo\system\core\Common.php 570
+ERROR - 2021-03-31 15:32:01 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:32:01 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:32:01 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:32:01 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:32:01 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:32:01 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:32:01 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:32:01 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:32:01 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php:65) C:\wamp64\racine\wazaaimmo\system\core\Common.php 570
+ERROR - 2021-03-31 15:32:28 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:32:28 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:32:28 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:32:28 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:32:28 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:32:28 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:32:28 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:32:28 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:32:28 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php:65) C:\wamp64\racine\wazaaimmo\system\core\Common.php 570
+ERROR - 2021-03-31 15:34:14 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:34:14 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:34:14 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:34:14 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:34:14 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:34:14 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:34:14 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:34:14 --> Severity: Warning --> Illegal string offset 'cat_id' C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:34:14 --> Severity: Warning --> Illegal string offset 'cat_libelle' C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:34:14 --> Severity: Warning --> Illegal string offset 'cat_id' C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:34:14 --> Severity: Warning --> Illegal string offset 'cat_libelle' C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:35:30 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:35:30 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:35:30 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:35:30 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:35:30 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:35:30 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:35:30 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:35:30 --> Severity: Warning --> Illegal string offset 'cat_id' C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:35:30 --> Severity: Warning --> Illegal string offset 'cat_libelle' C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:35:30 --> Severity: Warning --> Illegal string offset 'cat_id' C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:35:30 --> Severity: Warning --> Illegal string offset 'cat_libelle' C:\wamp64\racine\wazaaimmo\application\views\modifier.php 128
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Undefined variable: aView C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Undefined index: categoriestab C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:35:50 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:35:50 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\racine\wazaaimmo\application\views\modifier.php 126
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Undefined variable: aView C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Undefined index: categoriestab C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\application\models\ModifierModel.php 45
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:36:18 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:36:18 --> Severity: Warning --> Invalid argument supplied for foreach() C:\wamp64\racine\wazaaimmo\application\views\modifier.php 126
+ERROR - 2021-03-31 15:37:56 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:37:56 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:37:56 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:37:56 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:37:56 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:37:56 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:37:56 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:38:11 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:38:11 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:38:11 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:38:11 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:38:11 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:38:11 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:38:11 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:38:30 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:38:30 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:38:30 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:38:30 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:38:30 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:38:30 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:38:30 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112
+ERROR - 2021-03-31 15:38:45 --> Severity: Notice --> Undefined index: an_couleur C:\wamp64\racine\wazaaimmo\application\views\modifier.php 50
+ERROR - 2021-03-31 15:38:45 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 67
+ERROR - 2021-03-31 15:38:45 --> Severity: Notice --> Undefined index: an_photo C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:38:45 --> Severity: Notice --> Undefined index: an_libelle C:\wamp64\racine\wazaaimmo\application\views\modifier.php 69
+ERROR - 2021-03-31 15:38:45 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 98
+ERROR - 2021-03-31 15:38:45 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 107
+ERROR - 2021-03-31 15:38:45 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 112

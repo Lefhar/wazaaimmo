@@ -56,13 +56,14 @@ class Annonces extends CI_Controller
     {
       $id =$this->uri->segment(3);  
         $this->load->model('modifierModel');
-        $aListe = $this->modifierModel->modifier($id);
+        $aView = $this->modifierModel->modifier($id);
      //   var_dump($aListe[0]);
-        $aView["infoprod"] = $aListe[0];
+     
+   
       $this->load->model('usersModel');
       $aViewHeader = $this->usersModel->getUser();
-
-      $aViewHeader = ["title" => "Modification ".$aListe["categorie"][0]->cat_libelle." ".$aView["infoprod"]["an_titre"],
+    var_dump($aView);
+      $aViewHeader = ["title" => "Modification ".$aView["infoprod"]["cat_libelle"]." ".$aView["infoprod"]["an_titre"],
       "url" => "annonces/modifier/".$aView["infoprod"]['an_id'],"user" => $aViewHeader,"image"=>"assets/images/annonce_".$aView["infoprod"]["photo"][0]->pic_an_id."/".$aView["infoprod"]["photo"][0]->pic_an_id."-".$aView["infoprod"]["photo"][0]->pic_id.".".$aView["infoprod"]["photo"][0]->pic_ext];
       $this->load->view('header',$aViewHeader);
         $this->load->view('modifier',$aView);

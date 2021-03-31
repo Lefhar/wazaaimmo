@@ -26,16 +26,29 @@ class modifierModel extends CI_Model
         $this->load->library('form_validation'); 
     
         // Requête de sélection de l'enregistrement souhaité, ici le produit 7 
-        $this->db->select("an_id, an_offre , an_type, an_opt, an_pieces, an_ref, an_titre, an_description, an_local, an_surf_hab, an_surf_tot, an_prix, an_diagnostic, an_d_ajout, an_d_modif");
+        $this->db->select("an_id, an_offre , an_type, cat_id, cat_libelle, an_opt, an_pieces, an_ref,  an_titre, an_description, an_local, an_surf_hab, an_surf_tot, an_prix, an_diagnostic, an_d_ajout, an_d_modif");
         $this->db->from('annonces');
-
+        $this->db->join('categories', 'cat_id = an_type');
         $this->db->where('an_id',$id);
  
        //$aProduit = $this->query();
        $result = $this->db->get();
        $aprepare = $result->result(); 
+
+
+       $catreq = $this->db->query("SELECT cat_libelle, cat_id  FROM  categories  ORDER BY cat_libelle asc");  
+
+       // Récupération des résultats    
+       $aCat = $catreq->result_array();
+       $aView["categoriestab"] = $aCat;
+    //    foreach ($aCat as $row2 ){
+    //     $aView["categoriestab"] .= ["cat_id"=>$row2->cat_id,"cat_libelle"=>$row2->cat_libelle];
+      
+    //   }
+
  foreach ($aprepare as $row ){
-   $aView[]= ["an_id"=>$row->an_id,"an_offre"=>$row->an_offre,"an_type"=>$row->an_type,
+   $aView["infoprod"]= ["an_id"=>$row->an_id,"an_offre"=>$row->an_offre,
+   "cat_id"=>$row->cat_id,"cat_libelle"=>$row->cat_libelle,"an_type"=>$row->an_type,
    "an_opt"=>$row->an_opt,"an_pieces"=>$row->an_pieces,
    "an_ref"=>$row->an_ref,"an_titre"=>$row->an_titre,"an_description"=>$row->an_description,
    "an_local"=>$row->an_local,"an_surf_hab"=>$row->an_surf_hab,"an_surf_tot"=>$row->an_surf_tot,
@@ -45,11 +58,7 @@ class modifierModel extends CI_Model
  }
           
 
-        $categorie = $this->db->query("SELECT cat_libelle, cat_id  FROM  categories  ORDER BY cat_libelle asc");  
 
-        // Récupération des résultats    
-        $aCat = $categorie->result(); 
-        $aView["categorie"] = $aCat;
        
         if ($this->input->post()) 
         { // 2ème appel de la page: traitement du formulaire
