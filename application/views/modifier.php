@@ -42,15 +42,15 @@
         </div> ';    
         
 
-       //label couleur
+       //label local
         $data = array('class' => 'col-sm-2 col-form-label col-12');
-         echo '<div class="form-group row">'.form_label('Couleur', 'an_couleur',$data).'
+         echo '<div class="form-group row">'.form_label('Emplacement', 'an_local',$data).'
          <div class="col-sm-10 col-12"> ';
-          //input pro couleur
-         $data = array('name' => 'an_couleur','id' => 'an_couleur','class' => 'form-control','data-maxlength' => '30','placeholder' => 'Couleur (30 caractères MAX)','value' => ''.set_value('an_couleur',$infoprod["an_couleur"]).'');
+          //input an_local
+         $data = array('name' => 'an_local','id' => 'an_local','class' => 'form-control','data-maxlength' => '30','placeholder' => 'Local (30 caractères MAX)','value' => ''.set_value('an_local',$infoprod["an_local"]).'');
         echo form_input($data).'
         <div id="an_couleurError" class="counter"><span>0</span> caractères (30 max)</div> 
-        '.form_error('an_couleur').'
+        '.form_error('an_local').'
         </div>
         </div>  ';
 
@@ -79,45 +79,33 @@
 
 
 
-        //label Prix
+        //label surface habitable
         $data = array('class' => 'col-sm-2 col-form-label col-12');
          echo '<div class="form-group row">
-         '.form_label('Prix', 'an_prix',$data).'
+         '.form_label('Surface habitable', 'an_surf_hab',$data).'
          <div class="col-sm-10 col-12"> ';
         //input Prix
-         $data = array('name' => 'an_prix','id' => 'an_prix','class' => 'form-control','step' => 'any','type' => 'number','value' => ''.set_value('an_prix',$infoprod["an_prix"]).'');
+         $data = array('name' => 'an_surf_hab','id' => 'an_surf_hab','class' => 'form-control','step' => 'any','type' => 'number','value' => ''.set_value('an_surf_hab',$infoprod["an_surf_hab"]).'');
         echo form_input($data).'
-        '.form_error('an_prix').'
+        '.form_error('an_surf_hab').'
         </div>
         </div>  ';
 
 
-        //label stock
+        //label surface total
         $data = array('class' => 'col-sm-2 col-form-label col-12');
          echo '<div class="form-group row">
-         '.form_label('Stock', 'an_stock',$data).'
+         '.form_label('Surface Total', 'an_surf_tot',$data).'
          <div class="col-sm-10 col-12"> ';
         //input stock
-         $data = array('name' => 'an_stock','id' => 'an_stock','class' => 'form-control','type' => 'number', 'value' => ''.set_value('an_stock',$infoprod["an_stock"]).'');
+         $data = array('name' => 'an_surf_tot','id' => 'an_surf_tot','class' => 'form-control','type' => 'number', 'value' => ''.set_value('an_surf_tot',$infoprod["an_surf_tot"]).'');
         echo form_input($data).'
-        '.form_error('an_stock').'
+        '.form_error('an_surf_tot').'
         </div>
         </div>  ';
 
 
-        //label bloqué
-        $data = array('class' => 'col-sm-2 col-form-label col-12');
-        if($infoprod->an_bloque==1){$bloque = "disabled"; $checked = TRUE; }else{$bloque = "disabled";$checked = FALSE;}
-        echo '<div class="form-group row">'.form_label('Produit bloqué', 'an_bloque',$data).'
-        <div class="col-sm-10 col-12">
-        <div class="checkbox '.$bloque.'">';
-        //input pro bloqué
-         $data = array('name' => 'an_bloque','id' => 'an_bloque','class' => 'form-control','data-toggle' => 'toggle','data-onstyle'=>'danger','data-offstyle'=>'success', 'data-on' => 'Oui', 'data-off' => 'Non', 'value' => ''.set_value('an_bloque',$infoprod["an_bloque"]).'');
-         echo form_checkbox($data,'',$checked).'
-         </div>
-          </div>
-              </div> ';
-        
+       
         //label catégorie
          $data = array('class' => 'col-sm-2 col-form-label col-12');
         echo '<div class="form-group row">

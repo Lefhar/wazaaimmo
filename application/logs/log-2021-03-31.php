@@ -1262,3 +1262,11 @@ ERROR - 2021-03-31 15:56:53 --> Severity: Notice --> Undefined index: an_couleur
 ERROR - 2021-03-31 15:56:53 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 101
 ERROR - 2021-03-31 15:56:53 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 110
 ERROR - 2021-03-31 15:56:53 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 115
+ERROR - 2021-03-31 16:10:44 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 101
+ERROR - 2021-03-31 16:10:44 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 110
+ERROR - 2021-03-31 16:10:44 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 115
+ERROR - 2021-03-31 16:11:04 --> Severity: Notice --> Undefined index: an_stock C:\wamp64\racine\wazaaimmo\application\views\modifier.php 101
+ERROR - 2021-03-31 16:11:04 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 110
+ERROR - 2021-03-31 16:11:04 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 115
+ERROR - 2021-03-31 16:14:29 --> Severity: Notice --> Trying to get property 'an_bloque' of non-object C:\wamp64\racine\wazaaimmo\application\views\modifier.php 110
+ERROR - 2021-03-31 16:14:29 --> Severity: Notice --> Undefined index: an_bloque C:\wamp64\racine\wazaaimmo\application\views\modifier.php 115
