@@ -37,8 +37,9 @@ class Users extends CI_Controller {
         */
         $aView =  $this->usersModel->connexion();
 
-        $aViewHeader['user'] = $this->usersModel->getUser();
-    
+        $aViewHeader = $this->usersModel->getUser();
+        $aViewHeader = ["title" => "Connexion",
+        "url" => "/connexion","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
         $this->load->view('header',$aViewHeader);
           $this->load->view('connexion',$aView);
          $this->load->view('footer');
@@ -60,8 +61,9 @@ class Users extends CI_Controller {
         * remarque la syntaxe $this->nomModele->methode()
         */
         $aView =  $this->usersModel->inscription();
-        $aViewHeader['user'] = $this->usersModel->getUser();
-    
+        $aViewHeader = $this->usersModel->getUser();
+        $aViewHeader = ["title" => "inscription",
+        "url" => "/inscription","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
         $this->load->view('header',$aViewHeader);
         $this->load->view('inscription',$aView);
        $this->load->view('footer');
@@ -81,8 +83,9 @@ class Users extends CI_Controller {
         $aView =  $this->usersModel->deconnexion();
 
        
-        $aViewHeader['user'] = $this->usersModel->getUser();
-    
+        $aViewHeader = $this->usersModel->getUser();
+        $aViewHeader = ["title" => "Déconnection",
+        "url" => "/deconnexion","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
         $this->load->view('header',$aViewHeader);
         $this->load->view('deconnexion',$aView);
        $this->load->view('footer');
@@ -105,9 +108,9 @@ class Users extends CI_Controller {
         * remarque la syntaxe $this->nomModele->methode()
         */
      
-
-        $aViewHeader['user'] = $this->usersModel->getUser();
-    
+        $aViewHeader = $this->usersModel->getUser();
+        $aViewHeader = ["title" => "Validation d'inscription",
+        "url" => "/inscriptionvalide","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
         $this->load->view('header',$aViewHeader);
         $this->load->view('inscriptionvalide');
        $this->load->view('footer');
@@ -130,8 +133,9 @@ class Users extends CI_Controller {
         * remarque la syntaxe $this->nomModele->methode()
         */
         $aView =  $this->usersModel->validationemail($this->uri->segment(3));
-        $aViewHeader['user'] = $this->usersModel->getUser();
-    
+        $aViewHeader = $this->usersModel->getUser();
+        $aViewHeader = ["title" => "Validation email",
+        "url" => "/validationemail","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
         $this->load->view('header',$aViewHeader);
         $this->load->view('validationemail', $aView);
         $this->load->view('footer');
@@ -154,8 +158,9 @@ class Users extends CI_Controller {
         * remarque la syntaxe $this->nomModele->methode()
         */
         $aView =  $this->usersModel->resetpassword($this->uri->segment(3));
-        $aViewHeader['user'] = $this->usersModel->getUser();
-    
+        $aViewHeader = $this->usersModel->getUser();
+        $aViewHeader = ["title" => "réinitialisation mot de passe",
+        "url" => "/resetpassword","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
         $this->load->view('header',$aViewHeader);
         $this->load->view('resetpassword', $aView);
         $this->load->view('footer');
@@ -180,8 +185,9 @@ class Users extends CI_Controller {
         $aView =  $this->usersModel->lostpassword();
 
        
-        $aViewHeader['user'] = $this->usersModel->getUser();
-    
+        $aViewHeader = $this->usersModel->getUser();
+        $aViewHeader = ["title" => "Mot de passe perdu",
+        "url" => "/lostpassword","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
         $this->load->view('header',$aViewHeader);
         $this->load->view('lostpassword',$aView);
        $this->load->view('footer');
@@ -206,8 +212,9 @@ class Users extends CI_Controller {
         $aView =  $this->usersModel->resendemail();
 
   
-        $aViewHeader['user'] = $this->usersModel->getUser();
-    
+        $aViewHeader = $this->usersModel->getUser();
+        $aViewHeader = ["title" => "Renvoi validaiton email",
+        "url" => "/resendemail","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
         $this->load->view('header',$aViewHeader);
         $this->load->view('resendemail',$aView);
        $this->load->view('footer');

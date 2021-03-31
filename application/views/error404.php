@@ -11,7 +11,7 @@
             <article>
                
               
-                <img src="<?php echo base_url('assets/images/error_404.jpg');?>" class="w-100">
+                <img src="<?php echo base_url('assets/src/error_404.jpg');?>" class="w-100">
                
     </article>
     </div>

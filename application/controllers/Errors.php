@@ -22,8 +22,9 @@ class Errors  extends CI_Controller {
     {
         $this->load->model('usersModel');
         $aViewHeader = $this->usersModel->getUser();
-        $aViewHeader = ["title" => "Ajouter un produit","user" => $aViewHeader];
-        $this->load->view('header', $aViewHeader);
+        $aViewHeader = ["title" => "Erreur 404",
+        "url" => "/error404","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
+        $this->load->view('header',$aViewHeader);
         $this->load->view('error404');
         $this->load->view('footer');
     }

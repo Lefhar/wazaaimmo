@@ -20,8 +20,11 @@ class Annonces extends CI_Controller
       //  var_dump($aListe);
       $aView["liste_produits"] = $aListe;
       $this->load->model('usersModel');
-      $aViewHeader['user'] = $this->usersModel->getUser();
-    
+
+      $aViewHeader = $this->usersModel->getUser();
+      $aViewHeader = ["title" => $aView["liste_produits"][0]["cat_libelle"]." ".$aView["liste_produits"][0]["an_titre"],
+      "url" => "annonces/liste","user" => $aViewHeader,"image"=>"assets/images/annonce_".$aView["liste_produits"][0]["photo"][0]->pic_an_id."/".$aView["liste_produits"][0]["photo"][0]->pic_an_id."-".$aView["liste_produits"][0]["photo"][0]->pic_id.".".$aView["liste_produits"][0]["photo"][0]->pic_ext];
+      
       $this->load->view('header',$aViewHeader);
         $this->load->view('liste',$aView);
        $this->load->view('footer');
@@ -38,8 +41,10 @@ class Annonces extends CI_Controller
       //  var_dump($aListe);
       $aView["infoprod"] = $aListe;
       $this->load->model('usersModel');
-      $aViewHeader['user'] = $this->usersModel->getUser();
-     
+      $aViewHeader = $this->usersModel->getUser();
+
+      $aViewHeader = ["title" => $aView["infoprod"][0]["cat_libelle"]." ".$aView["infoprod"][0]["an_titre"],
+      "url" => "annonces/details/".$aView["infoprod"][0]['an_id'],"user" => $aViewHeader,"image"=>"assets/images/annonce_".$aView["infoprod"][0]["photo"][0]->pic_an_id."/".$aView["infoprod"][0]["photo"][0]->pic_an_id."-".$aView["infoprod"][0]["photo"][0]->pic_id.".".$aView["infoprod"][0]["photo"][0]->pic_ext];
       $this->load->view('header',$aViewHeader);
         $this->load->view('detail',$aView);
        $this->load->view('footer');

@@ -30,7 +30,9 @@ class Contact extends CI_Controller {
     {
         $this->load->model('usersModel');
         $this->load->model('contactModel');
-        $aViewHeader['user'] = $this->usersModel->getUser();
+        $aViewHeader = $this->usersModel->getUser();
+        $aViewHeader = ["title" => "Nous contacter",
+        "url" => "/contact","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
     
      
         /* On appelle la méthode liste() du modèle,
@@ -54,12 +56,15 @@ class Contact extends CI_Controller {
 
         $this->load->model('usersModel');
         $this->load->model('contactModel');
-        $aViewHeader['user'] = $this->usersModel->getUser();
+ 
         /* On appelle la méthode liste() du modèle,
         * qui retourne le tableau de résultat ici affecté dans la variable $aListe (un tableau)
         * remarque la syntaxe $this->nomModele->methode()
         */
         $data =   $this->contactModel->sendok();
+        $aViewHeader = $this->usersModel->getUser();
+        $aViewHeader = ["title" => "Message envoyé",
+        "url" => "/sendok","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
          $this->load->view('header',$aViewHeader);
          $this->load->view('contact',$data);
          $this->load->view('footer');

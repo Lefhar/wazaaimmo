@@ -17,8 +17,7 @@ class contactModel extends CI_Model
     {
 
         $this->load->helper('form', 'url');
-        $aViewHeader = $this->usersModel->getUser();
-        $aViewHeader = ["title" => "Nous contacter","user" => $aViewHeader];
+ 
         // Chargement de la librairie form_validation
         $this->load->library('form_validation');
    
