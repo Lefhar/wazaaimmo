@@ -136,44 +136,67 @@
         </div>
         <div class="col-lg-4">
     <?php 
+
+echo '<div class="card m-4" >
+'.form_open_multipart('/photos/upload','name="modification_photo" id="modification_photo"').'
+<div class="card-body">
+<h5 class="card-title">Ajouter de nouvelle photo</h5>';
+       //label Image
+
+       $data = array('class' => 'col-sm-2 col-form-label col-12');
+
+       echo '<p class="card-text">
+       <div class="form-group ">
+      
+       ';
+      //input pro Image
+      echo '<div class="parent-div">
+      <button class="btn-upload">Choisir le fichier</button>';
+       $data = array('name' => 'an_photo[]','id' => 'an_photo','type' => 'file','multiple'=>'true');
+       echo form_upload($data).'</div>';
+
+      echo form_error('an_photo').'';
+      if(!empty($sUploadErrors)){echo $sUploadErrors;}
+     echo '
+      </div>  
+
+      <div class="form-group">';
+      $data = array('name' => 'pic_an_id','id' => 'pic_an_id','type' => 'hidden','value' => $infoprod["an_id"]);
+      echo form_input($data);
+      //bouton ajouter
+       echo form_submit('', 'Ajouter', 'class="btn btn-dark btn-lg"');
+       //bouton pour réinitialiser 
+       echo form_reset('', 'Annuler', 'class="btn btn-danger btn-lg"');
+      echo ' </div></p>';
+      echo form_close().'
+            </div>
+          </div>
+      '; 
                    foreach($infoprod["photo"] as $img){
-                    echo '<img  class="w-100 p-1"  src="'.base_url('assets/images/annonce_'.$img->pic_an_id.'/'.$img->pic_an_id.'-'.$img->pic_id.'.'.$img->pic_ext).'" alt="'.$infoprod["an_titre"].'">';
-                }
-     //  balise form début du formulaire
-        echo form_open_multipart('/photos/upload','name="modification_photo" id="modification_photo"');
-               //label Image
+                 
 
-               $data = array('class' => 'col-sm-2 col-form-label col-12');
-
-               echo '<div class="form-group row">
-               '.form_label('Image', 'an_photo',$data).'
-               ';
-              //input pro Image
-               $data = array('name' => 'an_photo[]','id' => 'an_photo','class' => 'form-control-file','type' => 'file','multiple'=>'true');
-               echo form_upload($data).'';
-
-              echo'</br>
-
-              <div id="img" > </div>';
-              echo form_error('an_photo').'';
-              if(!empty($sUploadErrors)){echo $sUploadErrors;}
-             echo '
-              </div>  
-        
-              <div class="form-group">';
-              $data = array('name' => 'pic_an_id','id' => 'pic_an_id','type' => 'hidden','value' => $infoprod["an_id"]);
-              echo form_input($data);
-              //bouton ajouter
-               echo form_submit('', 'Ajouter', 'class="btn btn-dark btn-lg"');
-               //bouton pour réinitialiser 
-               echo form_reset('', 'Annuler', 'class="btn btn-danger btn-lg"');
-              echo ' </div>
-            
-              <!--balise form fin du formulaire-->';
-              echo form_close();
+                    $pic_an_id = array('name' => 'pic_id','id' => 'pic_id','type' => 'hidden','value' => $img->pic_id);
+                    echo '<div class="card m-4" >
+                    <div class="card-body">
+                    <img  class="w-100 p-1"  src="'.base_url('assets/images/annonce_'.$img->pic_an_id.'/'.$img->pic_an_id.'-'.$img->pic_id.'.'.$img->pic_ext).'" alt="'.$infoprod["an_titre"].'">
+                    <p class="card-text">
+                    '.form_open('/photos/delete','name="supprimer_photo" id="supprimer_photo"').'
+                    '.form_input($pic_an_id).'
                 
-    ?>
+                    '.form_submit('', 'Supprimer', 'class="btn btn-danger btn-lg"').'
+                   </p>
+                      
+                   '.form_close().'
+                    </div>
+                    </div>';
+                  }
+     //  balise form début du formulaire
 
+       
+              
+               
+    ?>
+</div>
     </div>
     </div>
 

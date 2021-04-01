@@ -81,4 +81,28 @@ echo $sUploadErrors;
         }
     }
 
+    public function delete()
+    {
+        $this->load->database();  
+    
+        // Chargement de la librairie form_validation
+        $this->load->library('form_validation'); 
+
+        $data = $this->input->post();
+      
+        $pic_id = $this->input->post('pic_id');
+
+        $photo = $this->db->query("SELECT pic_an_id, pic_id, pic_ext FROM picture WHERE pic_id= ?", $pic_id);
+        $aView["photo"] = $photo->row(); // première ligne du résultat
+        $pic_an_id = $aView["photo"]->pic_an_id;
+
+        $config['upload_path'] = $_SERVER['DOCUMENT_ROOT']. '/assets/images/annonce_'.$pic_an_id.'/'; // chemin où sera stocké le fichier
+           
+            if(unlink($config['upload_path']."/".$pic_an_id."-".$aView["photo"]->pic_id.".".$aView["photo"]->pic_ext)){
+                $this->db->where('pic_id', $pic_id);//défini la condition pro_id = id
+                $this->db->delete('picture');//on efface le produit de la base
+                redirect("annonces/modifier/".$pic_an_id);
+            }
+    }
+
 }
