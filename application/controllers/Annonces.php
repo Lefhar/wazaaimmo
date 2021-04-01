@@ -1,5 +1,5 @@
 <?php
-// application/controllers/Produits.php
+// application/controllers/Annonces.php
 
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -62,7 +62,7 @@ class Annonces extends CI_Controller
    
       $this->load->model('usersModel');
       $aViewHeader = $this->usersModel->getUser();
-    var_dump($aView);
+    //var_dump($aView);
       $aViewHeader = ["title" => "Modification ".$aView["infoprod"]["cat_libelle"]." ".$aView["infoprod"]["an_titre"],
       "url" => "annonces/modifier/".$aView["infoprod"]['an_id'],"user" => $aViewHeader,"image"=>"assets/images/annonce_".$aView["infoprod"]["photo"][0]->pic_an_id."/".$aView["infoprod"]["photo"][0]->pic_an_id."-".$aView["infoprod"]["photo"][0]->pic_id.".".$aView["infoprod"]["photo"][0]->pic_ext];
       $this->load->view('header',$aViewHeader);

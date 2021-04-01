@@ -1,7 +1,7 @@
 <!-- application/views/detail.php -->
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-<div class="col-12">   
+<div class="col-lg-8">   
 <article>
 
   
@@ -10,12 +10,12 @@
 
 
  <legend> Formulaire de modification de <?php
- //var_dump($infoprod);
+
  if(!empty($infoprod)){echo $infoprod["an_titre"];?> </legend>
      <?php 
      
     //  balise form début du formulaire
-       echo form_open_multipart('','name="modification_produit" id="modification_produit"'); ?>
+       echo form_open('','name="modification_produit" id="modification_produit"'); ?>
           <fieldset>
 
           <?php    
@@ -56,26 +56,7 @@
 
 
 
-        //label Image
-
-        $data = array('class' => 'col-sm-2 col-form-label col-12');
-
-         echo '<div class="form-group row">
-         '.form_label('Image', 'an_photo',$data).'
-         <div class="col-sm-10 col-12"> ';
-        //input pro Image
-         $data = array('name' => 'an_photo','id' => 'an_photo','class' => 'form-control-file','type' => 'file[]');
-        // echo form_upload($data).'';
-        foreach($infoprod["photo"] as $img){
-        echo '<img  class="img-fluid" width="100" src="'.base_url('assets/images/annonce_'.$img->pic_an_id.'/'.$img->pic_an_id.'-'.$img->pic_id.'.'.$img->pic_ext).'" alt="'.$infoprod["an_titre"].'">';
-    }
-        echo'</br>
-        <a class="btn btn-info btn-lg" onclick="add_fields();" >Modifier</a>
-        <div id="img" > </div>';
-        echo form_error('an_photo').'';
-        if(!empty($sUploadErrors)){echo $sUploadErrors;}
-       echo ' </div>
-        </div>  ';
+ 
 
 
 
@@ -148,9 +129,52 @@
         </fieldset>
         <!--balise form fin du formulaire-->';
         echo  form_fieldset_close();
+        echo form_close();
           }
  ?>
  </article>
         </div>
+        <div class="col-lg-4">
+    <?php 
+                   foreach($infoprod["photo"] as $img){
+                    echo '<img  class="w-100 p-1"  src="'.base_url('assets/images/annonce_'.$img->pic_an_id.'/'.$img->pic_an_id.'-'.$img->pic_id.'.'.$img->pic_ext).'" alt="'.$infoprod["an_titre"].'">';
+                }
+     //  balise form début du formulaire
+        echo form_open_multipart('/photos/upload','name="modification_photo" id="modification_photo"');
+               //label Image
+
+               $data = array('class' => 'col-sm-2 col-form-label col-12');
+
+               echo '<div class="form-group row">
+               '.form_label('Image', 'an_photo',$data).'
+               ';
+              //input pro Image
+               $data = array('name' => 'an_photo[]','id' => 'an_photo','class' => 'form-control-file','type' => 'file','multiple'=>'true');
+               echo form_upload($data).'';
+
+              echo'</br>
+
+              <div id="img" > </div>';
+              echo form_error('an_photo').'';
+              if(!empty($sUploadErrors)){echo $sUploadErrors;}
+             echo '
+              </div>  
+        
+              <div class="form-group">';
+              $data = array('name' => 'pic_an_id','id' => 'pic_an_id','type' => 'hidden','value' => $infoprod["an_id"]);
+              echo form_input($data);
+              //bouton ajouter
+               echo form_submit('', 'Ajouter', 'class="btn btn-dark btn-lg"');
+               //bouton pour réinitialiser 
+               echo form_reset('', 'Annuler', 'class="btn btn-danger btn-lg"');
+              echo ' </div>
+            
+              <!--balise form fin du formulaire-->';
+              echo form_close();
+                
+    ?>
+
     </div>
+    </div>
+
 </div>

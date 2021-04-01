@@ -1,3 +1,4 @@
+<!-- application/views/liste.php -->
 <div class="dropdown m-2 ">
           <button class="btn btn-bg-perso dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Trier par
@@ -28,12 +29,15 @@
 <div class="row pt-2 mx-0 mb-1">
 
 <?php if(!empty($liste_produits)) {  
-   //var_dump($liste_produits); 
-    //exit();
-//var_dump($photo); 
-
 
     foreach ($liste_produits as $row) {
+      if(!empty($row['an_offre'])){
+        if($row['an_offre'] == "A"){
+        $offre = "Achéte"; 
+       }elseif($row['an_offre'] == "L"){
+           $offre = "A louer";}elseif($row['an_offre'] == "V"){
+                $offre = "A Vendre";}else{$offre = "";}
+           }
        // echo $row['an_id'];
 //  var_dump($row);
 //echo $img; 
@@ -43,7 +47,7 @@
             <div class="card border-bg-perso mb-4 shadow-sm">
                 <div class="card-header text-center">
                     <h2 class="h5 card-title">
-                        <a href="<?=site_url("annonces/details/".$row['an_id']);?>" class="color-perso"><?=$row['cat_libelle'];?> <?=$row['an_titre'];?></a>
+                        <a href="<?=site_url("annonces/details/".$row['an_id']);?>" class="color-perso"><?=$offre;?> <?=$row['cat_libelle'];?> <?=$row['an_titre'];?></a>
                     </h2><!-- Titre -->
                     <h3 class="h6 card-subtitle text-muted"><?=$row['an_ref'];?></h3><!-- Référence -->
                     <a href="<?=site_url("annonces/details/".$row['an_id']);?>">
