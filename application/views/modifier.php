@@ -143,19 +143,25 @@ echo '<div class="card m-4" >
 <h5 class="card-title">Ajouter de nouvelle photo</h5>';
        //label Image
 
-       $data = array('class' => 'col-sm-2 col-form-label col-12');
-
+       $label = array('class' => 'custom-file-label', 'for'=>'an_photo');
+       $inputfile = array('name' => 'an_photo[]','id' => 'an_photo','type' => 'file','class' => 'custom-file-input form-control','multiple'=>'true');
        echo '<p class="card-text">
        <div class="form-group ">
       
        ';
-      //input pro Image
-      echo '<div class="parent-div">
-      <button class="btn-upload">Choisir le fichier</button>';
-       $data = array('name' => 'an_photo[]','id' => 'an_photo','type' => 'file','multiple'=>'true');
-       echo form_upload($data).'</div>';
 
-      echo form_error('an_photo').'';
+      echo '
+      <div class="custom-file">
+        '.form_upload($inputfile).'
+        '.form_label('Séléctionner des fichiers', 'an_photo',$label).'
+        '.form_error('an_photo').'
+        
+      </div>
+    ';
+
+
+
+   
       if(!empty($sUploadErrors)){echo $sUploadErrors;}
      echo '
       </div>  

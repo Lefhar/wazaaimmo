@@ -112,3 +112,5 @@ ERROR - 2021-04-01 16:11:40 --> Severity: Warning --> unlink(C:/wamp64/racine/wa
 ERROR - 2021-04-01 20:42:03 --> Severity: Warning --> unlink(C:/wamp64/racine/wazaaimmo/assets/images/annonce_//.jpg): No such file or directory C:\wamp64\racine\wazaaimmo\application\models\photosModel.php 101
 ERROR - 2021-04-01 20:43:47 --> Severity: Warning --> unlink(C:/wamp64/racine/wazaaimmo/assets/images/annonce_1//1.jpg): No such file or directory C:\wamp64\racine\wazaaimmo\application\models\photosModel.php 101
 ERROR - 2021-04-01 20:44:17 --> Severity: Warning --> unlink(C:/wamp64/racine/wazaaimmo/assets/images/annonce_1//1.jpg): No such file or directory C:\wamp64\racine\wazaaimmo\application\models\photosModel.php 101
+ERROR - 2021-04-01 21:55:02 --> Severity: Notice --> Array to string conversion C:\wamp64\racine\wazaaimmo\system\helpers\form_helper.php 610
+ERROR - 2021-04-01 22:01:42 --> Severity: Warning --> unlink(C:/wamp64/racine/wazaaimmo/assets/images/annonce_1/2-4.jpg): No such file or directory C:\wamp64\racine\wazaaimmo\application\models\photosModel.php 73
