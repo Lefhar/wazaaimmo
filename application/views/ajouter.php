@@ -19,6 +19,30 @@
           <fieldset>
 
           <?php    
+
+
+        //label an_offre
+        $labeloffre = array('class' => 'col-sm-2 col-form-label col-12');
+        echo '<div class="form-group row">
+        '.form_label('Type d\'offre', 'an_offre',$labeloffre).'
+         <div class="col-sm-10 col-12"> ';
+        $option = array();//on déclare le tableau
+        
+
+              foreach ($dataoffre as $key => $dia) {
+               //var_dump($row);
+                  $option[$dia["id"]] = $dia["titre"];// donné du tableaux
+              }
+          
+        $varSelect = array('id' => 'an_offre','class' => 'form-control');
+        // liste déroulante des catégories
+        echo form_dropdown('an_offre',$option,set_value('an_offre'),$varSelect).'
+        '.form_error('an_offre').'
+        </div>
+        </div>  ';
+
+
+
           //label Référence
         $labelref = array('class' => 'col-sm-2 col-form-label col-12');
         echo '<div class="form-group row">
@@ -57,7 +81,17 @@
 
 
 
- 
+         //label an_prix
+         $data = array('class' => 'col-sm-2 col-form-label col-12');
+         echo '<div class="form-group row">
+         '.form_label('Prix', 'an_prix',$data).'
+         <div class="col-sm-10 col-12"> ';
+        //input Prix
+         $data = array('name' => 'an_prix','id' => 'an_prix','class' => 'form-control','step' => 'any','type' => 'number','value' => ''.set_value('an_prix').'');
+        echo form_input($data).'
+        '.form_error('an_prix').'
+        </div>
+        </div>  ';
 
 
 
@@ -92,7 +126,7 @@
          '.form_label('Nombre de piéces', 'an_pieces',$data).'
          <div class="col-sm-10 col-12"> ';
         //input an_pieces
-         $data = array('name' => 'an_pieces','id' => 'an_pieces','class' => 'form-control','type' => 'number', 'value' => ''.set_value('an_surf_tot').'');
+         $data = array('name' => 'an_pieces','id' => 'an_pieces','class' => 'form-control','type' => 'number', 'value' => ''.set_value('an_pieces').'');
         echo form_input($data).'
         '.form_error('an_pieces').'
         </div>
@@ -115,7 +149,7 @@
           
         $variable = array('id' => 'an_opt','class' => 'form-control');
         // liste déroulante des catégories
-        echo form_dropdown('an_opt',$option,'',$variable).'
+        echo form_dropdown('an_opt',$option,set_value('an_opt'),$variable).'
         '.form_error('an_opt').'
         </div>
         </div>  ';
@@ -135,8 +169,8 @@
           
         $variable = array('id' => 'an_diagnostic','class' => 'form-control');
         // liste déroulante des catégories
-        echo form_dropdown('an_opt',$option,'',$variable).'
-        '.form_error('an_opt').'
+        echo form_dropdown('an_diagnostic',$option,set_value('an_diagnostic'),$variable).'
+        '.form_error('an_diagnostic').'
         </div>
         </div>  ';
 
@@ -154,9 +188,9 @@
                   $option[$cat["cat_id"]] = $cat["cat_libelle"];// donné du tableaux
               }
           }
-        $variable = array('id' => 'cat_id','class' => 'form-control');
+        $variable = array('id' => 'an_type','class' => 'form-control');
         // liste déroulante des catégories
-        echo form_dropdown('an_type',$option,'',$variable).'
+        echo form_dropdown('an_type',$option,set_value('an_type'),$variable).'
         '.form_error('an_type').'
         </div>
         </div>  ';
@@ -174,7 +208,9 @@
         </div>';
         $label = array('class' => 'custom-file-label', 'for'=>'an_photo');
                $inputfile = array('name' => 'an_photo[]','id' => 'an_photo','type' => 'file','class' => 'custom-file-input form-control','multiple'=>'true');
-        echo '<div class="card-body">
+       
+       if(!empty($sUploadErrors)){$errorup = $sUploadErrors;}else{ $errorup = "";}
+               echo '<div class="card-body">
         <h5 class="card-title">Ajouter des photos</h5>
      
         
@@ -186,14 +222,14 @@
               <div class="custom-file">
                 '.form_upload($inputfile).'
                 '.form_label('Séléctionner des fichiers', 'an_photo',$label).'
-                '.form_error('an_photo').'
+                '.$errorup.'
                 
               </div>
               </div>
 
         <div class="form-group">';
         //bouton ajouter
-         echo form_submit('', 'Modifier', 'class="btn btn-dark btn-lg"');
+         echo form_submit('', 'Ajouter', 'class="btn btn-bg-perso btn-lg"');
          //bouton pour réinitialiser 
          echo form_reset('', 'Annuler', 'class="btn btn-danger btn-lg"');
         echo ' </div>

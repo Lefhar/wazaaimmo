@@ -82,6 +82,18 @@
         </div>
         </div>  ';
 
+        //label an_prix
+        $data = array('class' => 'col-sm-2 col-form-label col-12');
+         echo '<div class="form-group row">
+         '.form_label('Prix', 'an_prix',$data).'
+         <div class="col-sm-10 col-12"> ';
+        //input Prix
+         $data = array('name' => 'an_prix','id' => 'an_prix','class' => 'form-control','step' => 'any','type' => 'number','value' => ''.set_value('an_prix',$infoprod["an_prix"]).'');
+        echo form_input($data).'
+        '.form_error('an_prix').'
+        </div>
+        </div>  ';
+
 
         //label surface total
         $data = array('class' => 'col-sm-2 col-form-label col-12');
