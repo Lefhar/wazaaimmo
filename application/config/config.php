@@ -273,7 +273,7 @@ $config['log_file_permissions'] = 0644;
 */
 $config['log_date_format'] = 'Y-m-d H:i:s';
 date_default_timezone_set("Europe/Paris");
-setlocale(LC_TIME, 'fr.UTF-8', "French");
+setlocale(LC_TIME, 'fr', "French");
 /*
 |--------------------------------------------------------------------------
 | Error Views Directory Path
