@@ -6,11 +6,10 @@
 
 
             <div class="card m-4 p-4" >
-            <?php    if(!empty($produit)) {
-            echo '<img  class="img-fluid" width="160" src="'.base_url('assets/images/'.$produit->pro_id.'.'.$produit->pro_photo.'').'" alt="'.$produit->cat_nom.' '.$produit->pro_libelle.' '.$produit->pro_couleur.'" 
-                title="'.$produit->cat_nom.' '.$produit->pro_libelle.' '.$produit->pro_couleur.'">';?>
+            <?php   if(!empty($produit)) {
+         ?>
                  <div class="card-body">
-             <h1 class="card-title">Etes vous sûr de vouloir supprimer <?php echo $produit->cat_nom.' '.$produit->pro_libelle.' '.$produit->pro_couleur.'';?> de la base de données ?</h1>
+             <h1 class="card-title">Etes vous sûr de vouloir supprimer <?php echo  $produit->an_titre;?> de la base de données ?</h1>
                  <?php
 
                 //  balise form début du formulaire
@@ -26,7 +25,7 @@
                     //bouton Confirmation
                      echo form_submit('', 'Confirmer', 'class="btn btn-bg-perso btn-lg"');
                      //bouton pour réinitialiser
-                     echo form_reset('', 'Annuler', 'class="btn btn-danger btn-lg"','onclick="location.href = \''.site_url("produits/liste").'\';"' );
+                     echo form_reset('', 'Annuler', 'class="btn btn-danger btn-lg"','onclick="location.href = \''.site_url("annonces/liste").'\';"' );
                     echo ' </div>
                     <!--balise form fin du formulaire-->';
                     echo  form_fieldset_close();

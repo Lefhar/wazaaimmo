@@ -83,8 +83,7 @@ if(empty($error)){
         // liste déroulante des catégories
         $option = array(
         ''         => 'Choisissez',
-        'Mes commandes'         => 'Mes commandes',
-        'question'           => 'Question sur un produit',
+        'question'           => 'Question sur un bien',
         'Réclamation'         => 'Réclamation',
         'Autres'        => 'Autres'
 );

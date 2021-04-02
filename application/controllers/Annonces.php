@@ -93,4 +93,25 @@ class Annonces extends CI_Controller
 
 
     }
+
+
+    public function delete()
+    {
+      $id =$this->uri->segment(3);  
+        $this->load->model('deleteModel');
+        $aView = $this->deleteModel->delete($id);
+     //   var_dump($aListe[0]);
+     
+   
+      $this->load->model('usersModel');
+      $aViewHeader = $this->usersModel->getUser();
+    //var_dump($aView);
+      $aViewHeader = ["title" => "Supprimer",
+      "url" => "annonces/ajouter","user" => $aViewHeader,"image"=>"assets/src/android-icon-192x192.png"];
+      $this->load->view('header',$aViewHeader);
+        $this->load->view('delete',$aView);
+       $this->load->view('footer');
+
+
+    }
 }

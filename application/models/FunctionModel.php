@@ -39,6 +39,24 @@ class functionModel extends CI_Model {
         return $resultat;
     }
 
-
+    public function deleteContent($path){
+        try{
+          $iterator = new DirectoryIterator($path);
+          foreach ( $iterator as $fileinfo ) {
+            if($fileinfo->isDot())continue;
+            if($fileinfo->isDir()){
+              if(deleteContent($fileinfo->getPathname()))
+                @rmdir($fileinfo->getPathname());
+            }
+            if($fileinfo->isFile()){
+              @unlink($fileinfo->getPathname());
+            }
+          }
+        } catch ( Exception $e ){
+           // write log
+           return false;
+        }
+        return true;
+      }
 
 }

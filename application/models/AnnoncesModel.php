@@ -28,7 +28,7 @@ class AnnoncesModel extends CI_Model
                 }
                 else
                 {
-                  $order = "order by an_id asc";
+                  $order = "order by an_vues asc";
                 }
                 $results = $this->db->query("SELECT *  FROM waz_annonces join waz_options on opt_id = an_opt join waz_categories on cat_id = an_type ".$order);  
    

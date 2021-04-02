@@ -183,3 +183,11 @@ ERROR - 2021-04-02 17:07:25 --> Severity: Warning --> addcslashes() expects exac
 ERROR - 2021-04-02 18:29:04 --> Severity: error --> Exception: Call to undefined function htmllspecialchars_decode() C:\wamp64\racine\wazaaimmo\application\views\modifier.php 176
 ERROR - 2021-04-02 19:01:54 --> Severity: error --> Exception: Call to undefined function htmllspecialchars_decode() C:\wamp64\racine\wazaaimmo\application\views\modifier.php 177
 ERROR - 2021-04-02 19:07:27 --> Severity: Warning --> htmlspecialchars_decode() expects parameter 1 to be string, array given C:\wamp64\racine\wazaaimmo\application\views\modifier.php 178
+ERROR - 2021-04-02 20:13:53 --> Severity: Notice --> Undefined property: Annonces::$ajouterModel C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php 102
+ERROR - 2021-04-02 20:13:53 --> Severity: error --> Exception: Call to a member function delete() on null C:\wamp64\racine\wazaaimmo\application\controllers\Annonces.php 102
+ERROR - 2021-04-02 20:15:29 --> Severity: Notice --> Undefined variable: produit C:\wamp64\racine\wazaaimmo\application\views\delete.php 9
+ERROR - 2021-04-02 20:16:14 --> Severity: Notice --> Undefined property: stdClass::$cat_nom C:\wamp64\racine\wazaaimmo\application\views\delete.php 12
+ERROR - 2021-04-02 20:16:14 --> Severity: Notice --> Undefined property: stdClass::$pro_libelle C:\wamp64\racine\wazaaimmo\application\views\delete.php 12
+ERROR - 2021-04-02 20:16:14 --> Severity: Notice --> Undefined property: stdClass::$pro_couleur C:\wamp64\racine\wazaaimmo\application\views\delete.php 12
+ERROR - 2021-04-02 20:17:36 --> Severity: Warning --> rmdir(C:/wamp64/racine/wazaaimmo/assets/images/annonce_24): Directory not empty C:\wamp64\racine\wazaaimmo\application\models\DeleteModel.php 54
+ERROR - 2021-04-02 20:18:12 --> Severity: Warning --> rmdir(C:/wamp64/racine/wazaaimmo/assets/images/annonce_24/): Directory not empty C:\wamp64\racine\wazaaimmo\application\models\DeleteModel.php 54

@@ -26,13 +26,11 @@ class deleteModel extends CI_Model
         $this->load->library('form_validation'); 
     
         // Requête de sélection de l'enregistrement souhaité, ici le produit 7 
-        $produit = $this->db->query("SELECT * FROM produits  join categories on cat_id = pro_cat_id  WHERE pro_id= ?", $id);
+        $produit = $this->db->query("SELECT * FROM waz_annonces WHERE an_id= ?", $id);
         $aView["produit"] = $produit->row(); // première ligne du résultat
 
-        $config['fileproduit'] = $_SERVER['DOCUMENT_ROOT']. '/ci/assets/images/'.$id.'.'.$aView["produit"]->pro_photo; // chemin où sera stocké le fichier
-        $aViewHeader = $this->usersModel->getUser();
-        $aViewHeader = ["title" => "Confirmation de suppréssion du produit","user" => $aViewHeader];
-        $this->load->view('header', $aViewHeader);
+        $config['fileproduit'] = $_SERVER['DOCUMENT_ROOT']. '/assets/images/annonce_'.$aView["produit"]->an_id.'/'; // chemin où sera stocké le fichier
+
         if ($this->input->post()) 
         { // 2ème appel de la page: traitement du formulaire
 
@@ -43,7 +41,7 @@ class deleteModel extends CI_Model
 
            if ($this->input->post('confirm') !="yes")
            { // Echec de la validation, on réaffiche la vue formulaire 
-               $this->load->view('delete', $aView);
+            
            }
            else
            { 
@@ -53,18 +51,22 @@ class deleteModel extends CI_Model
               * avant select(), insert() ou update()
               * dans cette configuration sur plusieurs lignes 
               */  
-              unlink($config['fileproduit']);//on supprime la photo 
-            $this->db->where('pro_id', $id);//défini la condition pro_id = id
-            $this->db->delete('produits');//on efface le produit de la base
+              if($this->functionModel->deleteContent($config['fileproduit'])){
+              //on supprime la photo 
+              $this->db->where('pic_an_id', $id);//défini la condition pro_id = id
+              $this->db->delete('waz_picture');//on efface le produit de la base
+            $this->db->where('an_id', $id);//défini la condition pro_id = id
+            $this->db->delete('waz_annonces');//on efface le produit de la base
     
-             redirect("produits/liste");
+             redirect("annonces/liste");
+              }
           }
         } 
         else 
         { // 1er appel de la page: affichage du formulaire             
-           $this->load->view('delete', $aView);
+        
         }
-        $this->load->view('footer');
+       return $aView;
     } // -- modifier()
 
 }
