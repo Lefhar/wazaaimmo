@@ -179,3 +179,7 @@ ERROR - 2021-04-02 16:39:15 --> Severity: Warning --> unlink(C:/wamp64/racine/wa
 ERROR - 2021-04-02 16:39:15 --> Severity: Warning --> unlink(C:/wamp64/racine/wazaaimmo/assets/images/annonce_21/D35B0917.jpg): No such file or directory C:\wamp64\racine\wazaaimmo\application\models\AjouterModel.php 144
 ERROR - 2021-04-02 16:39:15 --> Severity: Warning --> unlink(C:/wamp64/racine/wazaaimmo/assets/images/annonce_21/D35A0917.jpg): No such file or directory C:\wamp64\racine\wazaaimmo\application\models\AjouterModel.php 144
 ERROR - 2021-04-02 16:39:15 --> Severity: Warning --> Cannot modify header information - headers already sent by (output started at C:\wamp64\racine\wazaaimmo\system\core\Exceptions.php:271) C:\wamp64\racine\wazaaimmo\system\helpers\url_helper.php 564
+ERROR - 2021-04-02 17:07:25 --> Severity: Warning --> addcslashes() expects exactly 2 parameters, 1 given C:\wamp64\racine\wazaaimmo\application\views\modifier.php 176
+ERROR - 2021-04-02 18:29:04 --> Severity: error --> Exception: Call to undefined function htmllspecialchars_decode() C:\wamp64\racine\wazaaimmo\application\views\modifier.php 176
+ERROR - 2021-04-02 19:01:54 --> Severity: error --> Exception: Call to undefined function htmllspecialchars_decode() C:\wamp64\racine\wazaaimmo\application\views\modifier.php 177
+ERROR - 2021-04-02 19:07:27 --> Severity: Warning --> htmlspecialchars_decode() expects parameter 1 to be string, array given C:\wamp64\racine\wazaaimmo\application\views\modifier.php 178

@@ -1,3 +1,4 @@
+AddDefaultCharset UTF-8
 RewriteEngine on
 RewriteBase /
 # Hide the application and system directories by redirecting the request to index.php

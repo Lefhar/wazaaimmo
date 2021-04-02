@@ -24,7 +24,7 @@
         echo '<div class="form-group row">'.form_label('Référence', 'an_ref',$data).'
         <div class="col-sm-10 col-12"> ';
          //input Référence
-        $data = array('name' => 'an_ref','id' => 'an_ref','class' => 'form-control','data-maxlength' => '10','placeholder' => 'Référence (10 caractères MAX)','value' => ''.set_value('an_ref',$infoprod["an_ref"]).'');
+        $data = array('name' => 'an_ref','id' => 'an_ref','class' => 'form-control','data-maxlength' => '10','placeholder' => 'Référence (10 caractères MAX)','value' => ''.set_value('an_ref',$infoprod["an_ref"], false).'');
         echo form_input($data).'
         <div id="an_refError" class="counter"><span>0</span> caractères (10 max)</div> 
         '.form_error('an_ref').'
@@ -34,7 +34,7 @@
         $data = array('class' => 'col-sm-2 col-form-label col-12');
        echo '<div class="form-group row">'.form_label('Titre', 'an_titre',$data).'<br>
        <div class="col-sm-10 col-12">';
-         $data = array('name' => 'an_titre','id' => 'an_titre','class' => 'form-control','data-maxlength' => '200','placeholder' => 'Titre (200 caractères MAX)','value' => ''.set_value('an_titre',$infoprod["an_titre"]).'');
+         $data = array('name' => 'an_titre','id' => 'an_titre','class' => 'form-control','data-maxlength' => '200','placeholder' => 'Titre (200 caractères MAX)','value' => ''.set_value('an_titre',$infoprod["an_titre"], false).'');
         echo form_input($data).'
         <div id="an_titreError" class="counter"><span>0</span> caractères (200 max)</div> 
         '.form_error('an_titre').'
@@ -47,7 +47,7 @@
          echo '<div class="form-group row">'.form_label('Emplacement', 'an_local',$data).'
          <div class="col-sm-10 col-12"> ';
           //input an_local
-         $data = array('name' => 'an_local','id' => 'an_local','class' => 'form-control','data-maxlength' => '30','placeholder' => 'Local (30 caractères MAX)','value' => ''.set_value('an_local',$infoprod["an_local"]).'');
+         $data = array('name' => 'an_local','id' => 'an_local','class' => 'form-control','data-maxlength' => '30','placeholder' => 'Local (30 caractères MAX)','value' => ''.set_value('an_local',$infoprod["an_local"], false).'');
         echo form_input($data).'
         <div id="an_localError" class="counter"><span>0</span> caractères (30 max)</div> 
         '.form_error('an_local').'
@@ -141,7 +141,7 @@
                   }
               
             $variable = array('id' => 'an_diagnostic','class' => 'form-control');
-            // liste déroulante des catégories
+            // liste déroulante diagnostic
             echo form_dropdown('an_diagnostic',$option,$infoprod['an_diagnostic'],$variable).'
             '.form_error('an_diagnostic').'
             </div>
@@ -168,12 +168,14 @@
         </div>
         </div>  ';
 
-        //label catégorie
+
+
+        //label Description
         $data = array('class' => 'col-sm-2 col-form-label col-12');
         echo '<div class="form-group row">
         '.form_label('Description produit', 'an_description',$data).'
         <div class="col-sm-10 col-12"> ';
-        $data = array('name' => 'an_description','id' => 'an_description','class' => 'form-control','data-maxlength' => '1000','cols' => '30','rows' => '10','placeholder' => 'description (1000 caractères MAX)','value' => ''.set_value('an_description',$infoprod["an_description"]).'');
+        $data = array('name' => 'an_description','id' => 'an_description','class' => 'form-control','data-maxlength' => '1000','cols' => '30','rows' => '10','placeholder' => 'description (1000 caractères MAX)','value' => ''.set_value('an_description',$infoprod["an_description"], false).'');
        echo form_textarea($data).'
         <div id="an_descriptionError" class="counter"><span>0</span> caractères (1000 max)</div> 
         '.form_error('an_description').'
