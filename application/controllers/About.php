@@ -23,6 +23,8 @@ class About extends CI_Controller {
         $this->load->model('usersModel');
         $aViewHeader = $this->usersModel->getUser();
         $aViewHeader = ["title" => "Ajouter un produit","user" => $aViewHeader];
+        $aViewHeader = ["title" => "A propos",
+        "url" => "/about","image"=>"assets/src/android-icon-192x192.png","user" => $aViewHeader];
         $this->load->view('header', $aViewHeader);
         $this->load->view('apropos');
         $this->load->view('footer');

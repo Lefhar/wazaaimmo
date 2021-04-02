@@ -191,3 +191,5 @@ ERROR - 2021-04-02 20:16:14 --> Severity: Notice --> Undefined property: stdClas
 ERROR - 2021-04-02 20:16:14 --> Severity: Notice --> Undefined property: stdClass::$pro_couleur C:\wamp64\racine\wazaaimmo\application\views\delete.php 12
 ERROR - 2021-04-02 20:17:36 --> Severity: Warning --> rmdir(C:/wamp64/racine/wazaaimmo/assets/images/annonce_24): Directory not empty C:\wamp64\racine\wazaaimmo\application\models\DeleteModel.php 54
 ERROR - 2021-04-02 20:18:12 --> Severity: Warning --> rmdir(C:/wamp64/racine/wazaaimmo/assets/images/annonce_24/): Directory not empty C:\wamp64\racine\wazaaimmo\application\models\DeleteModel.php 54
+ERROR - 2021-04-02 20:58:36 --> Severity: Notice --> Undefined variable: url C:\wamp64\racine\wazaaimmo\application\views\header.php 33
+ERROR - 2021-04-02 20:58:36 --> Severity: Notice --> Undefined variable: image C:\wamp64\racine\wazaaimmo\application\views\header.php 36

@@ -3,12 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 02 avr. 2021 à 12:42
+-- Généré le : ven. 02 avr. 2021 à 19:32
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -20,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `wazaa_immo`
 --
+CREATE DATABASE IF NOT EXISTS `wazaa_immo` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `wazaa_immo`;
 
 -- --------------------------------------------------------
 
@@ -48,23 +49,24 @@ CREATE TABLE IF NOT EXISTS `waz_annonces` (
   PRIMARY KEY (`an_id`),
   KEY `an_opt` (`an_opt`),
   KEY `an_type` (`an_type`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `waz_annonces`
 --
 
 INSERT INTO `waz_annonces` (`an_id`, `an_offre`, `an_type`, `an_opt`, `an_pieces`, `an_ref`, `an_titre`, `an_description`, `an_local`, `an_surf_hab`, `an_surf_tot`, `an_prix`, `an_diagnostic`, `an_d_ajout`, `an_d_modif`, `an_vues`) VALUES
-(1, 'A', 2, 1, 5, '20A100', '100 km de Paris, maison 85m2 avec jardin', 'Exclusivité : dans bourg tous commerces avec écoles, maison d\'environ 85m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), 1h00 de Paris', 85, 225, 197000, 'F', '2020-11-13', '2021-04-02 14:38:31', 4),
-(2, 'L', 2, 1, 5, '20A100', '100 km de amiens, maison 45m2 avec jardin', 'Exclusivité :  maison d\'environ 45m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), 1h00 de Paris', 45, 225, 19000, 'F', '2020-11-13', NULL, 0),
+(1, 'A', 2, 1, 5, '20A100', 'à 100 km de Paris, maison 85m2 avec jardin ', 'Exclusivité : dans bourg tous commerces avec écoles, maison d\'environ 85m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80)', 85, 225, 197000, 'F', '2020-11-13', '2021-04-02 19:36:15', 14),
+(2, 'L', 2, 1, 5, '20A100', '100 km de amiens, maison 45m2 avec jardin', 'Exclusivité :  maison d\'environ 45m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), 1h00 de Paris', 45, 225, 19000, 'F', '2020-11-13', NULL, 1),
 (3, 'L', 3, 1, 5, '20A200', 'Corbie, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), corbie', 65, 225, 205555, 'F', '2020-11-13', NULL, 1),
 (4, 'L', 4, 1, 5, '20A300', 'Corbie, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), corbie', 65, 225, 67000, 'F', '2020-11-13', NULL, 0),
 (5, 'L', 4, 1, 5, '20A300', 'Villers, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Villers', 65, 225, 897000, 'F', '2020-11-13', NULL, 1),
 (6, 'L', 5, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 267000, 'F', '2020-11-13', NULL, 0),
 (7, 'L', 5, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 597000, 'F', '2020-11-13', NULL, 0),
-(8, 'A', 5, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 397000, 'F', '2020-11-13', NULL, 0),
+(8, 'A', 3, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 397000, 'F', '2020-11-13', '2021-04-02 21:03:56', 1),
 (9, 'L', 5, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 85000, 'F', '2020-11-13', NULL, 0),
-(10, 'L', 5, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 70000, 'F', '2020-11-13', NULL, 0);
+(10, 'L', 5, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 70000, 'F', '2020-11-13', NULL, 0),
+(23, 'V', 2, 8, 3, 'MSM001', 'à rénover située dans une rue pavillonnaire', 'La maison est actuellement composée :\r\nAu rdc d\'une entrée, un salon /séjour, une cuisine et 2 chambres, une salle de bains avec wc, une véranda donnant sur jardin, au 1er étage 2 chambres sous combles avec belle hauteur, un rez de jardin avec belle hauteur sous plafond et fenêtres, composé de 3 grandes pièces avec buanderie et accès jardin.\r\n\r\nSuite à la division de la parcelle réalisée dernièrement (la seconde parcelle créée qui jouxte étant revendue avec un PC pour une future maison neuve), certains travaux seront à réaliser obligatoirement (modification du débord de toiture sur un côté de la façade, avec une nouvelle entrée à créer sur le devant de la maison, ouverture du mur de clôture permettant un nouvel accès) le tout étant soumis à autorisation administrative un permis de construire a été déposé.\r\n\r\nLe permis de construire a été réalisé par un cabinet d\'architecte, déposé en mairie et accepté (accord définitif fin mai après recours des tiers).\r\n', 'A 12 km du centre de Paris', 200, 637, 750000, 'A', '2021-04-02', '2021-04-02 21:04:44', 1);
 
 -- --------------------------------------------------------
 
@@ -136,7 +138,7 @@ CREATE TABLE IF NOT EXISTS `waz_picture` (
   `pic_date` datetime NOT NULL DEFAULT current_timestamp(),
   PRIMARY KEY (`pic_id`),
   KEY `pic_an_id` (`pic_an_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=50 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `waz_picture`
@@ -169,7 +171,10 @@ INSERT INTO `waz_picture` (`pic_id`, `pic_an_id`, `pic_ext`, `pic_date`) VALUES
 (25, 10, 'jpg', '2021-03-29 15:39:17'),
 (26, 10, 'jpg', '2021-03-29 15:39:17'),
 (27, 10, 'jpg', '2021-03-29 15:39:17'),
-(28, 10, 'jpg', '2021-03-29 15:39:17');
+(28, 10, 'jpg', '2021-03-29 15:39:17'),
+(62, 23, 'jpg', '2021-04-02 20:04:20'),
+(63, 23, 'jpg', '2021-04-02 20:04:20'),
+(64, 23, 'jpg', '2021-04-02 20:04:20');
 
 -- --------------------------------------------------------
 
@@ -225,7 +230,6 @@ ALTER TABLE `waz_annonces`
 --
 ALTER TABLE `waz_picture`
   ADD CONSTRAINT `picture_ibfk_1` FOREIGN KEY (`pic_an_id`) REFERENCES `waz_annonces` (`an_id`);
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
