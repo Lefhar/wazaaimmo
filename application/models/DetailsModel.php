@@ -19,9 +19,9 @@ class detailsModel extends CI_Model
               $this->load->database();
                
        $this->db->select("an_id, an_offre , an_type, an_opt, an_pieces, cat_libelle, an_ref, an_titre, an_description, an_local, an_surf_hab, an_surf_tot, an_prix, an_diagnostic, an_d_ajout, an_d_modif, opt_id, opt_libelle, cat_id");
-       $this->db->from('annonces');
-       $this->db->join('options', 'opt_id = an_opt');
-       $this->db->join('categories', 'cat_id = an_type');
+       $this->db->from('waz_annonces');
+       $this->db->join('waz_options', 'opt_id = an_opt');
+       $this->db->join('waz_categories', 'cat_id = an_type');
        $this->db->where('an_id',$id);
 
       //$aProduit = $this->query();
@@ -37,6 +37,14 @@ foreach ($aprepare as $row ){
   "cat_id"=>$row->cat_id,"photo"=>$this->photo($row->an_id)];
 
 }
+
+
+
+$this->db->set("an_vues", "an_vues+1", false);
+$this->db->from("waz_annonces");
+$this->db->where("an_id", $row->an_id);
+//envoie de l'update à la base
+$this->db->update();
          
               return $aListe;
     }   
@@ -47,7 +55,7 @@ foreach ($aprepare as $row ){
               $this->load->helper('form', 'url'); 
               $this->load->database();  
               $this->db->select("pic_id,pic_an_id, pic_ext");
-              $this->db->from("picture");
+              $this->db->from("waz_picture");
               $this->db->where("pic_an_id", $id);
               $results = $this->db->get();
               // Récupération des résultats    

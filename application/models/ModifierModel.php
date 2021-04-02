@@ -16,7 +16,11 @@ class modifierModel extends CI_Model
      */
     public function modifier($id)
     {
-        // Chargement des assistants 'form' et 'url'
+        
+      if(empty($this->session->login)){
+         redirect("annonces/liste");
+      }
+      // Chargement des assistants 'form' et 'url'
         $this->load->helper('form', 'url'); 
     
         // Chargement de la librairie 'database'
@@ -27,8 +31,9 @@ class modifierModel extends CI_Model
     
         // Requête de sélection de l'enregistrement souhaité, ici le produit 7 
         $this->db->select("an_id, an_offre , an_type, cat_id, cat_libelle, an_opt, an_pieces, an_ref,  an_titre, an_description, an_local, an_surf_hab, an_surf_tot, an_prix, an_diagnostic, an_d_ajout, an_d_modif");
-        $this->db->from('annonces');
-        $this->db->join('categories', 'cat_id = an_type');
+        $this->db->from('waz_annonces');
+        $this->db->join('waz_categories', 'cat_id = an_type');
+        $this->db->join('waz_options', 'opt_id = an_opt');
         $this->db->where('an_id',$id);
  
        //$aProduit = $this->query();
@@ -36,11 +41,18 @@ class modifierModel extends CI_Model
        $aprepare = $result->result(); 
 
 
-       $catreq = $this->db->query("SELECT cat_libelle, cat_id  FROM  categories  ORDER BY cat_libelle asc");  
+       $catreq = $this->db->query("SELECT cat_libelle, cat_id  FROM  waz_categories  ORDER BY cat_libelle asc");  
 
        // Récupération des résultats    
        $aCat = $catreq->result_array();
        $aView["categoriestab"] = $aCat;
+
+       $catreq = $this->db->query("SELECT opt_libelle, opt_id  FROM  waz_options  ORDER BY opt_libelle asc");  
+
+       // Récupération des résultats    
+       $aOpt = $catreq->result_array();
+       $aView["optionstab"] = $aOpt;
+       
     //    foreach ($aCat as $row2 ){
     //     $aView["categoriestab"] .= ["cat_id"=>$row2->cat_id,"cat_libelle"=>$row2->cat_libelle];
       
@@ -57,7 +69,15 @@ class modifierModel extends CI_Model
  
  }
           
-
+     //tableau pour diagnostique
+     $aView["datadia"] = [0=>['id'=>'A','titre'=>'A'],
+     1=>['id'=>'B','titre'=>'B'],
+     2=>['id'=>'C','titre'=>'C'],
+     3=>['id'=>'D','titre'=>'D'],
+     4=>['id'=>'E','titre'=>'E'],
+     5=>['id'=>'F','titre'=>'F'],
+     6=>['id'=>'V','titre'=>'Non fait']
+     ];
 
        
         if ($this->input->post()) 
@@ -65,7 +85,7 @@ class modifierModel extends CI_Model
 
            $data = $this->input->post();
         //    var_dump($data);
-           if($this->input->post('an_bloque')==true){$data["an_bloque"]= "1";}else{$data["an_bloque"]= "0";}
+       
         //    var_dump($data);
            $an_ref = $this->input->post('an_ref');
            $data["an_ref"] = strtoupper($an_ref);
@@ -85,49 +105,13 @@ class modifierModel extends CI_Model
            
            // Définition des filtres, ici une valeur doit avoir été saisie pour le champ 'an_description'
            $this->form_validation->set_rules('an_description', 'Description', 'required|min_length[10]', array("required" => "<div class=\"alert alert-danger\" role=\"alert\">La %s est obligatoire.</div>", "min_length" => "<div class=\"alert alert-danger\" role=\"alert\">La %s doit avoir une longueur minimum de 10 caractères.</div>", "max_length" => "<div class=\"alert alert-danger\" role=\"alert\">La %s doit avoir une longueur minimum de 1000 caractères.</div>"));
-           if ($_FILES) 
-           {
-              // var_dump($_FILES);
-            $ctrlfile=false;
-              // On extrait l'extension du nom du fichier 
-              // Dans $_FILES["an_photo"], an_photo est la valeur donnée à l'attribut name du champ de type 'file'  
-              $extension = substr(strrchr($_FILES["an_photo"]["name"], "."), 1);
-              $config['upload_path'] = $_SERVER['DOCUMENT_ROOT']. '/assets/images/'; // chemin où sera stocké le fichier
-              $config['file_name'] = $id.'.'.$extension; 
-              // On indique les types autorisés (ici pour des images)
-              $config['allowed_types'] = 'gif|jpg|jpeg|png'; 
+  
 
-              if(file_exists($config['upload_path']."".$id.".".$aView["produit"]->an_photo))
-              {
-                unlink($config['upload_path']."".$config['file_name']);
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
-                    if(!$this->upload->do_upload('an_photo')){
-                          $ctrlfile=false;
-                    }else{
+           // Définition des filtres, ici une valeur doit avoir été saisie pour le champ 'Emplacement'
+           $this->form_validation->set_rules('an_local', 'Emplacement', 'required|min_length[10]|max_length[100]', array("required" => "<div class=\"alert alert-danger\" role=\"alert\">%s est obligatoire.</div>", "min_length" => "<div class=\"alert alert-danger\" role=\"alert\">%s doit avoir une longueur minimum de 10 caractères.</div>", "max_length" => "<div class=\"alert alert-danger\" role=\"alert\">%s doit avoir une longueur minimum de 100 caractères.</div>"));
+  
 
-                        $ctrlfile = true;
-                    }
-             }
-             else{
-                $this->load->library('upload', $config);
-                $this->upload->initialize($config);
-                if(!$this->upload->do_upload('an_photo')){
-                    $ctrlfile=false;
-              }else{
-
-
-                  $ctrlfile = true;
-              }
-            }
-
-            }else{
-
-               $ctrlfile = true;
-            
-           }
-    
-           if ($this->form_validation->run() == FALSE or $ctrlfile==false)
+           if ($this->form_validation->run() == FALSE)
            { // Echec de la validation, on réaffiche la vue formulaire 
              
            }
@@ -139,7 +123,7 @@ class modifierModel extends CI_Model
               * dans cette configuration sur plusieurs lignes 
               */  
              $this->db->where('an_id', $id);
-             $this->db->update('annonces', $data);
+             $this->db->update('waz_annonces', $data);
     
              redirect("annonces/liste");
           }
@@ -156,7 +140,7 @@ class modifierModel extends CI_Model
               $this->load->helper('form', 'url'); 
               $this->load->database();  
               $this->db->select("pic_id,pic_an_id, pic_ext");
-              $this->db->from("picture");
+              $this->db->from("waz_picture");
               $this->db->where("pic_an_id", $id);
               $results = $this->db->get();
               // Récupération des résultats    

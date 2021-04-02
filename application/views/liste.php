@@ -7,8 +7,8 @@
             <li class="dropdown-submenu">
               <a class="dropdown-item" tabindex="-1" href="#">Catégorie</a>
               <ul class="dropdown-menu btn-bg-perso" >
-                <li class="dropdown-item dropdown-item-perso"><a tabindex="-1" href="<?php echo site_url('produits/liste/cat/asc');?>">Croissant</a></li>
-                <li class="dropdown-item dropdown-item-perso"><a tabindex="-1" href="<?php echo site_url('produits/liste/cat/desc');?>">Décroissant</a></li>
+                <li class="dropdown-item dropdown-item-perso"><a tabindex="-1" href="<?php echo site_url('annonces/liste/cat/asc');?>">Croissant</a></li>
+                <li class="dropdown-item dropdown-item-perso"><a tabindex="-1" href="<?php echo site_url('annonces/liste/cat/desc');?>">Décroissant</a></li>
               </ul>
             </li>
         
@@ -16,13 +16,13 @@
             <li class="dropdown-submenu ">
               <a class="dropdown-item" tabindex="-1" href="#">Prix</a>
               <ul class="dropdown-menu btn-bg-perso">
-                <li class="dropdown-item btn-bg-perso"><a tabindex="-1" href="<?php echo site_url('produits/liste/prix/asc');?>">Croissant</a></li>
-                <li class="dropdown-item btn-bg-perso"><a tabindex="-1" href="<?php echo site_url('produits/liste/prix/desc');?>">Décroissant</a></li>
+                <li class="dropdown-item btn-bg-perso"><a tabindex="-1" href="<?php echo site_url('annonces/liste/prix/asc');?>">Croissant</a></li>
+                <li class="dropdown-item btn-bg-perso"><a tabindex="-1" href="<?php echo site_url('annonces/liste/prix/desc');?>">Décroissant</a></li>
               </ul>
             </li>
          </ul>
                     <?php if(!empty($this->session->login)){?>
-         <a class="btn btn-bg-perso float-right" href="<?php echo site_url('produits/ajouter');?>">Ajouter un bien</a>
+         <a class="btn btn-bg-perso float-right" href="<?php echo site_url('annonces/ajouter');?>">Ajouter un bien</a>
                     <?php } ?>
         </div>
 

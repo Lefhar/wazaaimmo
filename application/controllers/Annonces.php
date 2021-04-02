@@ -71,4 +71,26 @@ class Annonces extends CI_Controller
 
 
     }
+
+
+    
+    public function ajouter()
+    {
+      $id =$this->uri->segment(3);  
+        $this->load->model('ajouterModel');
+        $aView = $this->ajouterModel->ajouter($id);
+     //   var_dump($aListe[0]);
+     
+   
+      $this->load->model('usersModel');
+      $aViewHeader = $this->usersModel->getUser();
+    //var_dump($aView);
+      $aViewHeader = ["title" => "Ajouter un bien",
+      "url" => "annonces/ajouter","user" => $aViewHeader,"image"=>"assets/src/android-icon-192x192.png"];
+      $this->load->view('header',$aViewHeader);
+        $this->load->view('ajouter',$aView);
+       $this->load->view('footer');
+
+
+    }
 }

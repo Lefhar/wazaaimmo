@@ -10,6 +10,10 @@ class photosModel extends CI_Model
 
     public function upload()
     {
+
+        if(empty($this->session->login)){
+            redirect("annonces/liste");
+         }
         // Chargement des assistants 'form' et 'url'
         $this->load->helper('form', 'url'); 
     
@@ -58,7 +62,7 @@ echo $sUploadErrors;
                 $data["pic_date"] = date("Y-m-d H:i:s");
                 $data['pic_ext']= $extension;
                 var_dump($data);
-               $this->db->insert('picture', $data);
+               $this->db->insert('waz_picture', $data);
              // nom du fichier final
              
              $config['file_name'] = ''.$pic_an_id.'-'.$this->db->insert_id().'.'.$extension; 
@@ -83,6 +87,10 @@ echo $sUploadErrors;
 
     public function delete()
     {
+        
+        if(empty($this->session->login)){
+            redirect("annonces/liste");
+         }
         $this->load->database();  
     
         // Chargement de la librairie form_validation
@@ -92,7 +100,7 @@ echo $sUploadErrors;
       
         $pic_id = $this->input->post('pic_id');
 
-        $photo = $this->db->query("SELECT pic_an_id, pic_id, pic_ext FROM picture WHERE pic_id= ?", $pic_id);
+        $photo = $this->db->query("SELECT pic_an_id, pic_id, pic_ext FROM waz_picture WHERE pic_id= ?", $pic_id);
         $aView["photo"] = $photo->row(); // première ligne du résultat
         $pic_an_id = $aView["photo"]->pic_an_id;
 
@@ -100,7 +108,7 @@ echo $sUploadErrors;
            
             if(unlink($config['upload_path']."/".$pic_an_id."-".$aView["photo"]->pic_id.".".$aView["photo"]->pic_ext)){
                 $this->db->where('pic_id', $pic_id);//défini la condition pro_id = id
-                $this->db->delete('picture');//on efface le produit de la base
+                $this->db->delete('waz_picture');//on efface le produit de la base
                 redirect("annonces/modifier/".$pic_an_id);
             }
     }

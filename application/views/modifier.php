@@ -36,7 +36,7 @@
        <div class="col-sm-10 col-12">';
          $data = array('name' => 'an_titre','id' => 'an_titre','class' => 'form-control','data-maxlength' => '200','placeholder' => 'Titre (200 caractères MAX)','value' => ''.set_value('an_titre',$infoprod["an_titre"]).'');
         echo form_input($data).'
-        <div id="pro_libelleError" class="counter"><span>0</span> caractères (200 max)</div> 
+        <div id="an_titreError" class="counter"><span>0</span> caractères (200 max)</div> 
         '.form_error('an_titre').'
         </div>
         </div> ';    
@@ -49,12 +49,22 @@
           //input an_local
          $data = array('name' => 'an_local','id' => 'an_local','class' => 'form-control','data-maxlength' => '30','placeholder' => 'Local (30 caractères MAX)','value' => ''.set_value('an_local',$infoprod["an_local"]).'');
         echo form_input($data).'
-        <div id="an_couleurError" class="counter"><span>0</span> caractères (30 max)</div> 
+        <div id="an_localError" class="counter"><span>0</span> caractères (30 max)</div> 
         '.form_error('an_local').'
         </div>
         </div>  ';
 
-
+        //label an_pieces
+        $data = array('class' => 'col-sm-2 col-form-label col-12');
+         echo '<div class="form-group row">
+         '.form_label('Nombre de piéces', 'an_pieces',$data).'
+         <div class="col-sm-10 col-12"> ';
+        //input an_pieces
+         $data = array('name' => 'an_pieces','id' => 'an_pieces','class' => 'form-control','type' => 'number', 'value' => ''.set_value('an_surf_tot',$infoprod["an_pieces"]).'');
+        echo form_input($data).'
+        '.form_error('an_pieces').'
+        </div>
+        </div>  ';
 
  
 
@@ -85,6 +95,45 @@
         </div>
         </div>  ';
 
+        //label Option
+        $labelopt = array('class' => 'col-sm-2 col-form-label col-12');
+        echo '<div class="form-group row">
+        '.form_label('Option', 'an_opt',$labelopt).'
+         <div class="col-sm-10 col-12"> ';
+        $option = array();//on déclare le tableau
+        
+
+              foreach ($optionstab as $key => $cat) {
+               //var_dump($row);
+                  $option[$cat["opt_id"]] = $cat["opt_libelle"];// donné du tableaux
+              }
+          
+        $variable = array('id' => 'cat_id','class' => 'form-control');
+        // liste déroulante des catégories
+        echo form_dropdown('an_opt',$option,$infoprod['an_opt'],$variable).'
+        '.form_error('an_opt').'
+        </div>
+        </div>  ';
+
+        //label an_diagnostic
+        $data = array('class' => 'col-sm-2 col-form-label col-12');
+            echo '<div class="form-group row">
+            '.form_label('Diagnostic', 'an_diagnostic',$data).'
+            <div class="col-sm-10 col-12"> ';
+         $option = array();//on déclare le tableau
+
+
+                  foreach ($datadia as $key => $dia) {
+                  //var_dump($row);
+                      $option[$dia["id"]] = $dia["titre"];// donné du tableaux
+                  }
+              
+            $variable = array('id' => 'an_diagnostic','class' => 'form-control');
+            // liste déroulante des catégories
+            echo form_dropdown('an_diagnostic',$option,$infoprod['an_diagnostic'],$variable).'
+            '.form_error('an_diagnostic').'
+            </div>
+            </div>  ';
 
        
         //label catégorie

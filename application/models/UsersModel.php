@@ -22,7 +22,7 @@ class usersModel extends CI_Model
             $email = $this->session->login;
             $jeton = $this->session->jeton;
             $this->db->select("wi_nom, wi_prenom, wi_d_connect, wi_essai_connect, wi_d_test_connect, wi_mail");
-            $this->db->from('wi_users');
+            $this->db->from('waz_users');
             $this->db->where('wi_mail', $email);
             $this->db->where('wi_jeton_connect', $jeton);
 
@@ -69,7 +69,7 @@ class usersModel extends CI_Model
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email', array("required" => "<div class=\"alert alert-danger\" role=\"alert\">%s est obligatoire.</div>", "valid_email" => "<div class=\"alert alert-danger\" role=\"alert\">ce n'est pas une adresse %s valide.</div>"));
         $this->form_validation->set_rules('password', 'Mot de passe', 'trim|required|min_length[12]|max_length[30]|encode_php_tags', array("required" => "<div class=\"alert alert-danger\" role=\"alert\">%s est obligatoire.</div>", "min_length" => "<div class=\"alert alert-danger\" role=\"alert\">%s ne contient pas au minimum 12 caractéres.</div>", "max_length" => "<div class=\"alert alert-danger\" role=\"alert\">%s ne contient pas au maximum 30 caractéres.</div>"));
 
-        $users = $this->db->query("SELECT wi_mail, wi_password, wi_hash, wi_essai_connect, wi_d_test_connect, wi_mail_confirm FROM wi_users WHERE wi_mail = ?", $email);
+        $users = $this->db->query("SELECT wi_mail, wi_password, wi_hash, wi_essai_connect, wi_d_test_connect, wi_mail_confirm FROM waz_users WHERE wi_mail = ?", $email);
         $aView["users"] = $users->row(); // première ligne du résultat
 
 
@@ -86,7 +86,7 @@ class usersModel extends CI_Model
                 $data["wi_jeton_connect"] = $jeton;
                 $data["wi_essai_connect"] = 0;
                 $this->db->where('wi_mail', $email);
-                $this->db->update('wi_users', $data);
+                $this->db->update('waz_users', $data);
                 $this->session->set_userdata(array('login' => $email, 'jeton' => $jeton));
                 if (!empty($this->input->post('remember')) && $this->input->post('remember') == "on") {
                     $cookie = array(
@@ -177,12 +177,12 @@ class usersModel extends CI_Model
         }
         if ($this->form_validation->run() == TRUE) {
 
-            $users = $this->db->query("SELECT wi_mail FROM wi_users WHERE wi_mail = ?", $this->input->post('email'));
+            $users = $this->db->query("SELECT wi_mail FROM waz_users WHERE wi_mail = ?", $this->input->post('email'));
             $aView["users"] = $users->row();
             if (!empty($this->input->post('password')) && !empty($this->input->post('confirpassword')) && $this->input->post('confirpassword') == $this->input->post('password') && empty($aView["users"]->wi_mail)) {
 
 
-                $this->db->insert('wi_users', $data);
+                $this->db->insert('waz_users', $data);
 
 
                 $this->load->library('email');
@@ -275,7 +275,7 @@ class usersModel extends CI_Model
             // récupération des résultats
 //            $ausers = $result->result();
 
-            $users = $this->db->query("SELECT wi_mail_hash,wi_id,wi_mail FROM wi_users WHERE wi_mail_hash = ?", $jeton);
+            $users = $this->db->query("SELECT wi_mail_hash,wi_id,wi_mail FROM waz_users WHERE wi_mail_hash = ?", $jeton);
             $aView["jeton"] = $users->row(); // première ligne du résultat
 
 
@@ -284,7 +284,7 @@ class usersModel extends CI_Model
                 $data['wi_mail_confirm'] = "1";
                 $data['wi_mail_hash'] = NULL;
                 $this->db->where('wi_id', $id);
-                $this->db->update('wi_users', $data);
+                $this->db->update('waz_users', $data);
                 $data['error'] = '<div class="alert alert-success" role="alert">Merci votre email est validé vous pouvez vous  <a href="' . site_url('users/connexion') . '">connecter</a></div>';
 
                 //redirect('users/connexion');
@@ -351,7 +351,7 @@ class usersModel extends CI_Model
      */
     public function resetpassword($jeton)
     {
-        $users = $this->db->query("SELECT wi_id, wi_reset_hash FROM wi_users WHERE wi_reset_hash = ?", $jeton);
+        $users = $this->db->query("SELECT wi_id, wi_reset_hash FROM waz_users WHERE wi_reset_hash = ?", $jeton);
         $aView["jeton"] = $users->row(); // première ligne du résultat
 
         if (empty($jeton) or empty($aView["jeton"]->wi_reset_hash)) {
@@ -380,7 +380,7 @@ class usersModel extends CI_Model
                 $id = $aView["jeton"]->wi_id;
                 //recupération des données post
                 $this->db->where('wi_id', $id);
-                $this->db->update('wi_users', $data);
+                $this->db->update('waz_users', $data);
   redirect('users/connexion');
             }
 
@@ -402,7 +402,7 @@ class usersModel extends CI_Model
         $data['wi_reset_hash'] = md5($this->functionModel->password($salt, $salt));
         $data['wi_mail'] = $this->input->post('email');
 
-        $users = $this->db->query("SELECT wi_id, wi_reset_hash, wi_mail FROM wi_users WHERE wi_mail = ?", $data['wi_mail']);
+        $users = $this->db->query("SELECT wi_id, wi_reset_hash, wi_mail FROM waz_users WHERE wi_mail = ?", $data['wi_mail']);
         $aView["jeton"] = $users->row(); // première ligne du résultat
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email', array("required" => "<div class=\"alert alert-danger\" role=\"alert\">%s est obligatoire.</div>", "valid_email" => "<div class=\"alert alert-danger\" role=\"alert\">ce n'est pas une adresse %s valide.</div>"));
 
@@ -413,7 +413,7 @@ class usersModel extends CI_Model
             if(!empty($aView["jeton"]->wi_mail)) {
                 $id = $aView["jeton"]->wi_id;
                 $this->db->where('wi_id', $id);
-                $this->db->update('wi_users', $data);
+                $this->db->update('waz_users', $data);
                 $this->load->library('email');
                 $config = array();
                 $config['protocol'] = 'smtp';
@@ -488,7 +488,7 @@ class usersModel extends CI_Model
 
         $data['wi_mail'] = $this->input->post('email');
 
-        $users = $this->db->query("SELECT wi_id, wi_mail_hash, wi_mail FROM wi_users WHERE wi_mail = ?", $data['wi_mail']);
+        $users = $this->db->query("SELECT wi_id, wi_mail_hash, wi_mail FROM waz_users WHERE wi_mail = ?", $data['wi_mail']);
         $aView["jeton"] = $users->row(); // première ligne du résultat
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email', array("required" => "<div class=\"alert alert-danger\" role=\"alert\">%s est obligatoire.</div>", "valid_email" => "<div class=\"alert alert-danger\" role=\"alert\">ce n'est pas une adresse %s valide.</div>"));
 

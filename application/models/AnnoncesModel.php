@@ -30,7 +30,7 @@ class AnnoncesModel extends CI_Model
                 {
                   $order = "order by an_id asc";
                 }
-                $results = $this->db->query("SELECT *  FROM annonces join options on opt_id = an_opt join categories on cat_id = an_type ".$order);  
+                $results = $this->db->query("SELECT *  FROM waz_annonces join waz_options on opt_id = an_opt join waz_categories on cat_id = an_type ".$order);  
    
               // Récupération des résultats    
               $aprepare = $results->result(); 
@@ -57,7 +57,7 @@ foreach ($aprepare as $row ){
               $this->load->helper('form', 'url'); 
               $this->load->database();  
               $this->db->select("pic_id,pic_an_id, pic_ext");
-              $this->db->from("picture");
+              $this->db->from("waz_picture");
               $this->db->where("pic_an_id", $id);
               $results = $this->db->get();
               // Récupération des résultats    
