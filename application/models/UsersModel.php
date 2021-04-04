@@ -76,7 +76,7 @@ class usersModel extends CI_Model
         $aViewHeader = ["title" => "Connexion"];
 
         // Appel des différents morceaux de vues
-   
+   //var_dump($aView["users"]);
         if ($this->form_validation->run() == TRUE) {
             if (!empty($aView["users"]->wi_mail) && password_verify($this->functionModel->password($password, $aView["users"]->wi_hash), $aView["users"]->wi_password)&&$aView["users"]->wi_mail_confirm==1) {
 
@@ -90,7 +90,7 @@ class usersModel extends CI_Model
                 $this->session->set_userdata(array('login' => $email, 'jeton' => $jeton));
                 if (!empty($this->input->post('remember')) && $this->input->post('remember') == "on") {
                     $cookie = array(
-                        'name' => 'jarditou',
+                        'name' => 'Wazaaimmo',
                         'value' => '' . $email . ':' . $jeton . '',
                         'expire' => '16500',
                         'domain' => '' . $_SERVER['HTTP_HOST'] . '',
@@ -102,7 +102,7 @@ class usersModel extends CI_Model
                 }
                 redirect("annonces/liste");
 
-            }elseif ($aView["users"]->wi_mail_confirm==0){
+            }elseif (!empty($aView["users"]->wi_mail_confirm)&&$aView["users"]->wi_mail_confirm==0){
                 $aView['error'] = '<div class="alert alert-danger" role="alert">Vous devez valider votre adresse email <a href="' . site_url('users/resendemail') . '">renvoyer</a></div>';
             
             } else {
@@ -190,49 +190,207 @@ class usersModel extends CI_Model
                 $config['protocol'] = 'smtp';
                 $config['smtp_host'] = 'smtp.laposte.net';
                 $config['smtp_user'] = 'igor.popoviche@laposte.net';
-                $config['smtp_pass'] = '4vefg7kK';
+                $config['smtp_pass'] = 'mot de passe';
                 $config['smtp_port'] = 587;
                 $config['mailtype'] = 'html';
                 $this->email->initialize($config);
                 $this->email->set_newline("\r\n");
-                $this->email->from('igor.popoviche@laposte.net', 'Jarditou');
+                $this->email->from('igor.popoviche@laposte.net', 'Wazaa immo');
                 $this->email->to($this->input->post('email'));
                 $this->email->subject('Confirmation email');
-                $this->email->message("<!DOCTYPE html>
-                        <html lang='fr'>
-                        <head>
-                        <meta charset='utf-8'>
-                        <title>Confirmer votre adresse email</title>   
-                        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-                        <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
-                        <link rel='stylesheet' href='" . base_url("assets/css/style.css") . "'>
-                        </head>
-                        <body>
-                        <div class='container'>
-                            <div class='row'>
-                                <div class='col-12'>
-                                  <h1>Confirmez votre adresse email</h1>
-                              </div>    
-                            </div>   
-                            <div class='row'>
-                                <div class='col-12'>
-                                 <p><a href='" . site_url('/users/validationemail/') . "" . ($data['wi_mail_hash']) . "' > Confirmez votre adresse email</a></p>
-                                 si vous ne pouvez pas lire cette email suivez copiez ce lien et coller le dans la barre d'adresse Lien " . site_url('/users/validationemail/') . "" . ($data['wi_mail_hash']) . "
-                              </div>    
-                            </div>   
-                            <div class='row'>
-                                <div class='col-12'>
-                                  <img src='" . base_url("assets/images/jarditowi_logo.jpg") . "' title='Logo' alt='Logo' class='img-fluid'>
-                                </div>    
-                            </div>   
-                        </div> 
-                          
-                        <script src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous'></script>
-                        <script src='" . base_url("assets/css/script.js") . "'></script>
-                        <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous'></script>
-                        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous'></script>
-                        </body>
-                        </html>");
+                $this->email->message("<html xmlns='http://www.w3.org/1999/xhtml' xmlns:v='urn:schemas-microsoft-com:vml' xmlns:o='urn:schemas-microsoft-com:office:office'><head>
+                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                <title>Confirmez votre adresse email</title>
+                <style type='text/css'>
+                    /* ----- Custom Font Import ----- */
+                    @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin,latin-ext);
+            
+                    /* ----- Text Styles ----- */
+                    table{
+                        font-family: 'Lato', Arial, sans-serif;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-font-smoothing: antialiased;
+                    }
+            
+                    @media only screen and (max-width: 700px){
+                        /* ----- Base styles ----- */
+                        .full-width-container{
+                            padding: 0 !important;
+                        }
+            
+                        .container{
+                            width: 100% !important;
+                        }
+            
+                        /* ----- Header ----- */
+                        .header td{
+                            padding: 30px 15px 30px 15px !important;
+                        }
+            
+                        /* ----- Projects list ----- */
+                        .projects-list{
+                            display: block !important;
+                        }
+            
+                        .projects-list tr{
+                            display: block !important;
+                        }
+            
+                        .projects-list td{
+                            display: block !important;
+                        }
+            
+                        .projects-list tbody{
+                            display: block !important;
+                        }
+            
+                        .projects-list img{
+                            margin: 0 auto 25px auto;
+                        }
+            
+                        /* ----- Half block ----- */
+                        .half-block{
+                            display: block !important;
+                        }
+            
+                        .half-block tr{
+                            display: block !important;
+                        }
+            
+                        .half-block td{
+                            display: block !important;
+                        }
+            
+                        .half-block__image{
+                            width: 100% !important;
+                            background-size: cover;
+                        }
+            
+                        .half-block__content{
+                            width: 100% !important;
+                            box-sizing: border-box;
+                            padding: 25px 15px 25px 15px !important;
+                        }
+            
+                        /* ----- Hero subheader ----- */
+                        .hero-subheader__title{
+                            padding: 80px 15px 15px 15px !important;
+                            font-size: 35px !important;
+                        }
+            
+                        .hero-subheader__content{
+                            padding: 0 15px 90px 15px !important;
+                        }
+            
+                        /* ----- Title block ----- */
+                        .title-block{
+                            padding: 0 15px 0 15px;
+                        }
+            
+                        /* ----- Paragraph block ----- */
+                        .paragraph-block__content{
+                            padding: 25px 15px 18px 15px !important;
+                        }
+            
+                        /* ----- Info bullets ----- */
+                        .info-bullets{
+                            display: block !important;
+                        }
+            
+                        .info-bullets tr{
+                            display: block !important;
+                        }
+            
+                        .info-bullets td{
+                            display: block !important;
+                        }
+            
+                        .info-bullets tbody{
+                            display: block;
+                        }
+            
+                        .info-bullets__icon{
+                            text-align: center;
+                            padding: 0 0 15px 0 !important;
+                        }
+            
+                        .info-bullets__content{
+                            text-align: center;
+                        }
+            
+                        .info-bullets__block{
+                            padding: 25px !important;
+                        }
+            
+                        /* ----- CTA block ----- */
+                        .cta-block__title{
+                            padding: 35px 15px 0 15px !important;
+                        }
+            
+                        .cta-block__content{
+                            padding: 20px 15px 27px 15px !important;
+                        }
+            
+                        .cta-block__button{
+                            padding: 0 15px 0 15px !important;
+                        }
+                    }
+                </style>
+            
+                <!--[if gte mso 9]><xml>
+                    <o:OfficeDocumentSettings>
+                        <o:AllowPNG/>
+                        <o:PixelsPerInch>96</o:PixelsPerInch>
+                    </o:OfficeDocumentSettings>
+                </xml><![endif]-->
+            </head>
+            
+            <body style='padding: 0; margin: 0;' bgcolor='#eeeeee'>
+               
+            
+                <!-- / Full width container -->
+                <table class='full-width-container' border='0' cellpadding='0' cellspacing='0' height='100%' width='100%' bgcolor='#eeeeee' style='width: 100%; height: 100%; padding: 30px 0 30px 0;'>
+                    <tbody><tr>
+                        <td align='center' valign='top'>
+                            <!-- / 700px container -->
+                            <table class='container' border='0' cellpadding='0' cellspacing='0' width='700' bgcolor='#ffffff' style='width: 700px;'>
+                                <tbody><tr>
+                                    <td align='center' valign='top'>
+                                        <!-- / Header -->
+                                        <table class='container header' border='0' cellpadding='0' cellspacing='0' width='620' style='width: 620px;'>
+                                            <tbody><tr>
+                                                <td style='padding: 30px 0 30px 0; border-bottom: solid 1px #eeeeee;' align='left'>
+                                                    <a href='#' style='font-size: 30px; text-decoration: none; color: #000000;'>Réinitialisation mot de passe</a>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                        <!-- /// Header -->
+            
+                                        <!-- / Hero subheader -->
+                                        <table class='container hero-subheader' border='0' cellpadding='0' cellspacing='0' width='620' style='width: 620px;'>
+                                            <tbody><tr>
+                                                <td class='hero-subheader__title' style='font-size: 43px; font-weight: bold; padding: 80px 0 15px 0;' align='left'>Vous avez demandez à reinitialiser votre mot de passe veuillez suivre le lien</td>
+                                            </tr>
+            
+                                            <tr>
+                                                <td class='hero-subheader__content' style='font-size: 16px; line-height: 27px; color: #969696; padding: 0 60px 66px 0;' align='left'>
+                                                <p><a href='" . site_url('/users/validationemail/') . "" . ($data['wi_mail_hash']) . "' > Confirmez votre adresse email</a></p>
+                                                si vous ne pouvez pas lire cette email suivez copiez ce lien et coller le dans la barre d'adresse Lien " . site_url('/users/validationemail/') . "" . ($data['wi_mail_hash']) . "
+            
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                     
+                                        
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+            </body></html>");
+                
                 $this->email->send();
                 redirect('users/inscriptionvalide');
             } else {
@@ -419,49 +577,203 @@ class usersModel extends CI_Model
                 $config['protocol'] = 'smtp';
                 $config['smtp_host'] = 'smtp.laposte.net';
                 $config['smtp_user'] = 'igor.popoviche@laposte.net';
-                $config['smtp_pass'] = '4vefg7kK';
+                $config['smtp_pass'] = 'mot de passe';
                 $config['smtp_port'] = 587;
                 $config['mailtype'] = 'html';
                 $this->email->initialize($config);
                 $this->email->set_newline("\r\n");
-                $this->email->from('igor.popoviche@laposte.net', 'Jarditou');
+                $this->email->from('igor.popoviche@laposte.net', 'Wazaa immo');
                 $this->email->to($this->input->post('email'));
                 $this->email->subject('Réinitialisation mot de passe');
-                $this->email->message("<!DOCTYPE html>
-                        <html lang='fr'>
-                        <head>
-                        <meta charset='utf-8'>
-                        <title>Réinitialisation mot de passe</title>   
-                        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-                        <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
-                        <link rel='stylesheet' href='" . base_url("assets/css/style.css") . "'>
-                        </head>
-                        <body>
-                        <div class='container'>
-                            <div class='row'>
-                                <div class='col-12'>
-                                  <h1>Réinitialisation mot de passe</h1>
-                              </div>    
-                            </div>   
-                            <div class='row'>
-                                <div class='col-12'>
-                                 <p><a href='" . site_url('/users/resetpassword/') . "" . ($data['wi_reset_hash']) . "' > Réinitialisez votre mot de passe</a></p>
-                                 si vous ne pouvez pas lire cette email copiez ce lien et coller le dans la barre d'adresse  " . site_url('/users/resetpassword/') . "" . ($data['wi_reset_hash']) . "
-                              </div>    
-                            </div>   
-                            <div class='row'>
-                                <div class='col-12'>
-                                  <img src='" . base_url("assets/images/jarditowi_logo.jpg") . "' title='Logo' alt='Logo' class='img-fluid'>
-                                </div>    
-                            </div>   
-                        </div> 
-                          
-                        <script src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous'></script>
-                        <script src='" . base_url("assets/css/script.js") . "'></script>
-                        <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous'></script>
-                        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous'></script>
-                        </body>
-                        </html>");
+                $this->email->message("<html xmlns='http://www.w3.org/1999/xhtml' xmlns:v='urn:schemas-microsoft-com:vml' xmlns:o='urn:schemas-microsoft-com:office:office'><head>
+                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                <title>Réinitialisation mot de passe</title>
+                <style type='text/css'>
+                    /* ----- Custom Font Import ----- */
+                    @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin,latin-ext);
+            
+                    /* ----- Text Styles ----- */
+                    table{
+                        font-family: 'Lato', Arial, sans-serif;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-font-smoothing: antialiased;
+                    }
+            
+                    @media only screen and (max-width: 700px){
+                        /* ----- Base styles ----- */
+                        .full-width-container{
+                            padding: 0 !important;
+                        }
+            
+                        .container{
+                            width: 100% !important;
+                        }
+            
+                        /* ----- Header ----- */
+                        .header td{
+                            padding: 30px 15px 30px 15px !important;
+                        }
+            
+                        /* ----- Projects list ----- */
+                        .projects-list{
+                            display: block !important;
+                        }
+            
+                        .projects-list tr{
+                            display: block !important;
+                        }
+            
+                        .projects-list td{
+                            display: block !important;
+                        }
+            
+                        .projects-list tbody{
+                            display: block !important;
+                        }
+            
+                        .projects-list img{
+                            margin: 0 auto 25px auto;
+                        }
+            
+                        /* ----- Half block ----- */
+                        .half-block{
+                            display: block !important;
+                        }
+            
+                        .half-block tr{
+                            display: block !important;
+                        }
+            
+                        .half-block td{
+                            display: block !important;
+                        }
+            
+                        .half-block__image{
+                            width: 100% !important;
+                            background-size: cover;
+                        }
+            
+                        .half-block__content{
+                            width: 100% !important;
+                            box-sizing: border-box;
+                            padding: 25px 15px 25px 15px !important;
+                        }
+            
+                        /* ----- Hero subheader ----- */
+                        .hero-subheader__title{
+                            padding: 80px 15px 15px 15px !important;
+                            font-size: 35px !important;
+                        }
+            
+                        .hero-subheader__content{
+                            padding: 0 15px 90px 15px !important;
+                        }
+            
+                        /* ----- Title block ----- */
+                        .title-block{
+                            padding: 0 15px 0 15px;
+                        }
+            
+                        /* ----- Paragraph block ----- */
+                        .paragraph-block__content{
+                            padding: 25px 15px 18px 15px !important;
+                        }
+            
+                        /* ----- Info bullets ----- */
+                        .info-bullets{
+                            display: block !important;
+                        }
+            
+                        .info-bullets tr{
+                            display: block !important;
+                        }
+            
+                        .info-bullets td{
+                            display: block !important;
+                        }
+            
+                        .info-bullets tbody{
+                            display: block;
+                        }
+            
+                        .info-bullets__icon{
+                            text-align: center;
+                            padding: 0 0 15px 0 !important;
+                        }
+            
+                        .info-bullets__content{
+                            text-align: center;
+                        }
+            
+                        .info-bullets__block{
+                            padding: 25px !important;
+                        }
+            
+                        /* ----- CTA block ----- */
+                        .cta-block__title{
+                            padding: 35px 15px 0 15px !important;
+                        }
+            
+                        .cta-block__content{
+                            padding: 20px 15px 27px 15px !important;
+                        }
+            
+                        .cta-block__button{
+                            padding: 0 15px 0 15px !important;
+                        }
+                    }
+                </style>
+            
+                <!--[if gte mso 9]><xml>
+                    <o:OfficeDocumentSettings>
+                        <o:AllowPNG/>
+                        <o:PixelsPerInch>96</o:PixelsPerInch>
+                    </o:OfficeDocumentSettings>
+                </xml><![endif]-->
+            </head>
+            
+            <body style='padding: 0; margin: 0;' bgcolor='#eeeeee'>
+               
+            
+                <!-- / Full width container -->
+                <table class='full-width-container' border='0' cellpadding='0' cellspacing='0' height='100%' width='100%' bgcolor='#eeeeee' style='width: 100%; height: 100%; padding: 30px 0 30px 0;'>
+                    <tbody><tr>
+                        <td align='center' valign='top'>
+                            <!-- / 700px container -->
+                            <table class='container' border='0' cellpadding='0' cellspacing='0' width='700' bgcolor='#ffffff' style='width: 700px;'>
+                                <tbody><tr>
+                                    <td align='center' valign='top'>
+                                        <!-- / Header -->
+                                        <table class='container header' border='0' cellpadding='0' cellspacing='0' width='620' style='width: 620px;'>
+                                            <tbody><tr>
+                                                <td style='padding: 30px 0 30px 0; border-bottom: solid 1px #eeeeee;' align='left'>
+                                                    <a href='#' style='font-size: 30px; text-decoration: none; color: #000000;'>Réinitialisation mot de passe</a>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                        <!-- /// Header -->
+            
+                                        <!-- / Hero subheader -->
+                                        <table class='container hero-subheader' border='0' cellpadding='0' cellspacing='0' width='620' style='width: 620px;'>
+                                            <tbody><tr>
+                                                <td class='hero-subheader__title' style='font-size: 43px; font-weight: bold; padding: 80px 0 15px 0;' align='left'>Réinitialisation mot de passe</td>
+                                            </tr>
+            
+                                            <tr>
+                                                <td class='hero-subheader__content' style='font-size: 16px; line-height: 27px; color: #969696; padding: 0 60px 66px 0;' align='left'><a href='" . site_url('/users/validationemail/') . "" . $aView['jeton']->wi_mail_hash . "' > Confirmez votre adresse email</a>
+            
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+
+                                    </td>
+                                </tr>
+                            </tbody></table>
+            </body></html>");
                 $this->email->send();
                 $data['error'] = '<div class="alert alert-success" role="alert">Merci un email vous a été envoyé vérifier votre boite de reception ou courrier indésirable</div>';
    
@@ -507,49 +819,210 @@ class usersModel extends CI_Model
                 $config['protocol'] = 'smtp';
                 $config['smtp_host'] = 'smtp.laposte.net';
                 $config['smtp_user'] = 'igor.popoviche@laposte.net';
-                $config['smtp_pass'] = '4vefg7kK';
+                $config['smtp_pass'] = 'mot de passe';
                 $config['smtp_port'] = 587;
                 $config['mailtype'] = 'html';
                 $this->email->initialize($config);
                 $this->email->set_newline("\r\n");
-                $this->email->from('igor.popoviche@laposte.net', 'Jarditou');
+                $this->email->from('igor.popoviche@laposte.net', 'Wazaa immo');
                 $this->email->to($aView["jeton"]->wi_mail);
                 $this->email->subject('Confirmation email');
-                $this->email->message("<!DOCTYPE html>
-                        <html lang='fr'>
-                        <head>
-                        <meta charset='utf-8'>
-                        <title>Confirmer votre adresse email</title>   
-                        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-                        <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' integrity='sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T' crossorigin='anonymous'>
-                        <link rel='stylesheet' href='" . base_url("assets/css/style.css") . "'>
-                        </head>
-                        <body>
-                        <div class='container'>
-                            <div class='row'>
-                                <div class='col-12'>
-                                  <h1>Confirmez votre adresse email</h1>
-                              </div>    
-                            </div>   
-                            <div class='row'>
-                                <div class='col-12'>
-                                 <p><a href='" . site_url('/users/validationemail/') . "" . $aView["jeton"]->wi_mail_hash . "' > Confirmez votre adresse email</a></p>
+                $this->email->message("<html xmlns='http://www.w3.org/1999/xhtml' xmlns:v='urn:schemas-microsoft-com:vml' xmlns:o='urn:schemas-microsoft-com:office:office'><head>
+                <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+                <title>Confirmer votre adresse email</title>
+                <style type='text/css'>
+                    /* ----- Custom Font Import ----- */
+                    @import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin,latin-ext);
+            
+                    /* ----- Text Styles ----- */
+                    table{
+                        font-family: 'Lato', Arial, sans-serif;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-font-smoothing: antialiased;
+                    }
+            
+                    @media only screen and (max-width: 700px){
+                        /* ----- Base styles ----- */
+                        .full-width-container{
+                            padding: 0 !important;
+                        }
+            
+                        .container{
+                            width: 100% !important;
+                        }
+            
+                        /* ----- Header ----- */
+                        .header td{
+                            padding: 30px 15px 30px 15px !important;
+                        }
+            
+                        /* ----- Projects list ----- */
+                        .projects-list{
+                            display: block !important;
+                        }
+            
+                        .projects-list tr{
+                            display: block !important;
+                        }
+            
+                        .projects-list td{
+                            display: block !important;
+                        }
+            
+                        .projects-list tbody{
+                            display: block !important;
+                        }
+            
+                        .projects-list img{
+                            margin: 0 auto 25px auto;
+                        }
+            
+                        /* ----- Half block ----- */
+                        .half-block{
+                            display: block !important;
+                        }
+            
+                        .half-block tr{
+                            display: block !important;
+                        }
+            
+                        .half-block td{
+                            display: block !important;
+                        }
+            
+                        .half-block__image{
+                            width: 100% !important;
+                            background-size: cover;
+                        }
+            
+                        .half-block__content{
+                            width: 100% !important;
+                            box-sizing: border-box;
+                            padding: 25px 15px 25px 15px !important;
+                        }
+            
+                        /* ----- Hero subheader ----- */
+                        .hero-subheader__title{
+                            padding: 80px 15px 15px 15px !important;
+                            font-size: 35px !important;
+                        }
+            
+                        .hero-subheader__content{
+                            padding: 0 15px 90px 15px !important;
+                        }
+            
+                        /* ----- Title block ----- */
+                        .title-block{
+                            padding: 0 15px 0 15px;
+                        }
+            
+                        /* ----- Paragraph block ----- */
+                        .paragraph-block__content{
+                            padding: 25px 15px 18px 15px !important;
+                        }
+            
+                        /* ----- Info bullets ----- */
+                        .info-bullets{
+                            display: block !important;
+                        }
+            
+                        .info-bullets tr{
+                            display: block !important;
+                        }
+            
+                        .info-bullets td{
+                            display: block !important;
+                        }
+            
+                        .info-bullets tbody{
+                            display: block;
+                        }
+            
+                        .info-bullets__icon{
+                            text-align: center;
+                            padding: 0 0 15px 0 !important;
+                        }
+            
+                        .info-bullets__content{
+                            text-align: center;
+                        }
+            
+                        .info-bullets__block{
+                            padding: 25px !important;
+                        }
+            
+                        /* ----- CTA block ----- */
+                        .cta-block__title{
+                            padding: 35px 15px 0 15px !important;
+                        }
+            
+                        .cta-block__content{
+                            padding: 20px 15px 27px 15px !important;
+                        }
+            
+                        .cta-block__button{
+                            padding: 0 15px 0 15px !important;
+                        }
+                    }
+                </style>
+            
+                <!--[if gte mso 9]><xml>
+                    <o:OfficeDocumentSettings>
+                        <o:AllowPNG/>
+                        <o:PixelsPerInch>96</o:PixelsPerInch>
+                    </o:OfficeDocumentSettings>
+                </xml><![endif]-->
+            </head>
+            
+            <body style='padding: 0; margin: 0;' bgcolor='#eeeeee'>
+               
+            
+                <!-- / Full width container -->
+                <table class='full-width-container' border='0' cellpadding='0' cellspacing='0' height='100%' width='100%' bgcolor='#eeeeee' style='width: 100%; height: 100%; padding: 30px 0 30px 0;'>
+                    <tbody><tr>
+                        <td align='center' valign='top'>
+                            <!-- / 700px container -->
+                            <table class='container' border='0' cellpadding='0' cellspacing='0' width='700' bgcolor='#ffffff' style='width: 700px;'>
+                                <tbody><tr>
+                                    <td align='center' valign='top'>
+                                        <!-- / Header -->
+                                        <table class='container header' border='0' cellpadding='0' cellspacing='0' width='620' style='width: 620px;'>
+                                            <tbody><tr>
+                                                <td style='padding: 30px 0 30px 0; border-bottom: solid 1px #eeeeee;' align='left'>
+                                                    <a href='#' style='font-size: 30px; text-decoration: none; color: #000000;'>Réinitialisation mot de passe</a>
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                        <!-- /// Header -->
+            
+                                        <!-- / Hero subheader -->
+                                        <table class='container hero-subheader' border='0' cellpadding='0' cellspacing='0' width='620' style='width: 620px;'>
+                                            <tbody><tr>
+                                                <td class='hero-subheader__title' style='font-size: 43px; font-weight: bold; padding: 80px 0 15px 0;' align='left'>Confirmer votre email</td>
+                                            </tr>
+            
+                                            <tr>
+                                                <td class='hero-subheader__content' style='font-size: 16px; line-height: 27px; color: #969696; padding: 0 60px 66px 0;' align='left'>
+                                                <p><a href='" . site_url('/users/validationemail/') . "" . $aView["jeton"]->wi_mail_hash . "' > Confirmez votre adresse email</a></p>
                                  si vous ne pouvez pas lire cette email suivez copiez ce lien et coller le dans la barre d'adresse Lien " . site_url('/users/validationemail/') . "" .$aView["jeton"]->wi_mail_hash . "
-                              </div>    
-                            </div>   
-                            <div class='row'>
-                                <div class='col-12'>
-                                  <img src='" . base_url("assets/images/jarditowi_logo.jpg") . "' title='Logo' alt='Logo' class='img-fluid'>
-                                </div>    
-                            </div>   
-                        </div> 
-                          
-                        <script src='https://code.jquery.com/jquery-3.4.1.slim.min.js' integrity='sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n' crossorigin='anonymous'></script>
-                        <script src='" . base_url("assets/css/script.js") . "'></script>
-                        <script src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js' integrity='sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo' crossorigin='anonymous'></script>
-                        <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js' integrity='sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6' crossorigin='anonymous'></script>
-                        </body>
-                        </html>");
+                              
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                     
+                                        
+                                                </td>
+                                            </tr>
+                                        </tbody></table>
+                                    </td>
+                                </tr>
+                            </tbody></table>
+            </body></html>");
+
+
+
+                
                 $this->email->send();
                 $data['error'] = '<div class="alert alert-success" role="alert">Merci un email vous a été envoyé vérifier votre boite de reception ou courrier indésirable</div>';
                 $this->load->view('header', $aViewHeader);
