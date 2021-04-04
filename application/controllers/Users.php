@@ -182,7 +182,7 @@ class Users extends CI_Controller {
         * qui retourne le tableau de résultat ici affecté dans la variable $aListe (un tableau)
         * remarque la syntaxe $this->nomModele->methode()
         */
-        $aView =  $this->usersModel->lostpassword();
+        $aView =  $this->usersModel->lostpassword($this->uri->segment(3));
 
        
         $aViewHeader = $this->usersModel->getUser();

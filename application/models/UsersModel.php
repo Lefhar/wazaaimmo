@@ -90,7 +90,7 @@ class usersModel extends CI_Model
                 $this->session->set_userdata(array('login' => $email, 'jeton' => $jeton));
                 if (!empty($this->input->post('remember')) && $this->input->post('remember') == "on") {
                     $cookie = array(
-                        'name' => 'Wazaaimmo',
+                        'name' => 'wazaaimmo',
                         'value' => '' . $email . ':' . $jeton . '',
                         'expire' => '16500',
                         'domain' => '' . $_SERVER['HTTP_HOST'] . '',
@@ -509,15 +509,14 @@ class usersModel extends CI_Model
      */
     public function resetpassword($jeton)
     {
+
         $users = $this->db->query("SELECT wi_id, wi_reset_hash FROM waz_users WHERE wi_reset_hash = ?", $jeton);
         $aView["jeton"] = $users->row(); // première ligne du résultat
 
         if (empty($jeton) or empty($aView["jeton"]->wi_reset_hash)) {
 
             $data['errorjeton'] = '<div class="alert alert-danger" role="alert">Désolé une erreur c\'est produite jeton incorrect</div>';
-            $this->load->view('header');
-            $this->load->view('resetpassword', $data);
-            $this->load->view('footer');
+
 
         } else {
             $salt = $this->functionModel->salt(12);
@@ -530,10 +529,7 @@ class usersModel extends CI_Model
             $this->form_validation->set_rules('confirpassword', 'Confirmation mot de passe', 'required|matches[password]', array("required" => "<div class=\"alert alert-danger\" role=\"alert\">%s est obligatoire.</div>", "matches" => "<div class=\"alert alert-danger\" role=\"alert\">%s ne correspond pas au mot de passe.</div>"));
             $this->load->helper('form', 'url');
             if ($this->form_validation->run() == FALSE) {
-                $aViewHeader = ["title" => "réinitialisation mot de passe"];
-                $this->load->view('header', $aViewHeader);
-                $this->load->view('resetpassword');
-                $this->load->view('footer');
+
             } else {
                 $id = $aView["jeton"]->wi_id;
                 //recupération des données post
@@ -555,12 +551,11 @@ class usersModel extends CI_Model
     public function lostpassword()
     {
 
-        $aViewHeader = ["title" => "Mot de passe oublié"];
         $salt = $this->functionModel->salt(12);
         $data['wi_reset_hash'] = md5($this->functionModel->password($salt, $salt));
         $data['wi_mail'] = $this->input->post('email');
 
-        $users = $this->db->query("SELECT wi_id, wi_reset_hash, wi_mail FROM waz_users WHERE wi_mail = ?", $data['wi_mail']);
+        $users = $this->db->query("SELECT wi_id, wi_reset_hash, wi_mail, wi_mail_hash FROM waz_users WHERE wi_mail = ?", $data['wi_mail']);
         $aView["jeton"] = $users->row(); // première ligne du résultat
         $this->form_validation->set_rules('email', 'Email', 'trim|required|valid_email', array("required" => "<div class=\"alert alert-danger\" role=\"alert\">%s est obligatoire.</div>", "valid_email" => "<div class=\"alert alert-danger\" role=\"alert\">ce n'est pas une adresse %s valide.</div>"));
 
@@ -761,7 +756,7 @@ class usersModel extends CI_Model
                                             </tr>
             
                                             <tr>
-                                                <td class='hero-subheader__content' style='font-size: 16px; line-height: 27px; color: #969696; padding: 0 60px 66px 0;' align='left'><a href='" . site_url('/users/validationemail/') . "" . $aView['jeton']->wi_mail_hash . "' > Confirmez votre adresse email</a>
+                                                <td class='hero-subheader__content' style='font-size: 16px; line-height: 27px; color: #969696; padding: 0 60px 66px 0;' align='left'><a href='" . site_url('/users/resetpassword/') . "" . $data['wi_reset_hash'] . "' > Réinitialisation mot de passe</a>
             
                                                 </td>
                                             </tr>
@@ -808,9 +803,7 @@ class usersModel extends CI_Model
 
         if ($this->form_validation->run() == FALSE) {
 
-            $this->load->view('header', $aViewHeader);
-            $this->load->view('lostpassword');
-            $this->load->view('footer');
+
         }else{
             if(!empty($aView["jeton"]->wi_mail)&&!empty($aView["jeton"]->wi_mail_hash)) {
 
@@ -1025,14 +1018,10 @@ class usersModel extends CI_Model
                 
                 $this->email->send();
                 $data['error'] = '<div class="alert alert-success" role="alert">Merci un email vous a été envoyé vérifier votre boite de reception ou courrier indésirable</div>';
-                $this->load->view('header', $aViewHeader);
-                $this->load->view('resendmail',$data);
-                $this->load->view('footer');
+
             }else{
                 $data['error'] = '<div class="alert alert-danger" role="alert">Veuillez vérifier votre adresse email</div>';
-                $this->load->view('header', $aViewHeader);
-                $this->load->view('resendmail',$data);
-                $this->load->view('footer');
+
             }
 
         }

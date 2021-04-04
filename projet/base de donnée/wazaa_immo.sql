@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : ven. 02 avr. 2021 à 19:32
+-- Généré le : Dim 04 avr. 2021 à 08:13
 -- Version du serveur :  10.4.13-MariaDB
 -- Version de PHP : 7.3.21
 
@@ -61,7 +61,7 @@ INSERT INTO `waz_annonces` (`an_id`, `an_offre`, `an_type`, `an_opt`, `an_pieces
 (3, 'L', 3, 1, 5, '20A200', 'Corbie, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), corbie', 65, 225, 205555, 'F', '2020-11-13', NULL, 1),
 (4, 'L', 4, 1, 5, '20A300', 'Corbie, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), corbie', 65, 225, 67000, 'F', '2020-11-13', NULL, 0),
 (5, 'L', 4, 1, 5, '20A300', 'Villers, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Villers', 65, 225, 897000, 'F', '2020-11-13', NULL, 1),
-(6, 'L', 5, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 267000, 'F', '2020-11-13', NULL, 0),
+(6, 'L', 5, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 267000, 'F', '2020-11-13', NULL, 1),
 (7, 'L', 5, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 597000, 'F', '2020-11-13', NULL, 0),
 (8, 'A', 3, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 397000, 'F', '2020-11-13', '2021-04-02 21:03:56', 1),
 (9, 'L', 5, 1, 5, '20A400', 'Camon, appartement 65m2 avec jardin', 'Exclusivité :  maison d\'environ 65m2 habitables, mitoyenne, offrant en rez-de-chaussée, une cuisine aménagée, un salon-séjour, un WC et une loggia et à l\'étage, 3 chambres dont 2 avec placard, salle de bains et WC séparé. 2 garages. Le tout sur une parcelle de 225m2. Chauffage individuel clim réversible, DPE : F. ', 'Somme (80), Camon', 65, 225, 85000, 'F', '2020-11-13', NULL, 0),
@@ -184,7 +184,7 @@ INSERT INTO `waz_picture` (`pic_id`, `pic_an_id`, `pic_ext`, `pic_date`) VALUES
 
 DROP TABLE IF EXISTS `waz_users`;
 CREATE TABLE IF NOT EXISTS `waz_users` (
-  `wi_id` int(10) UNSIGNED NOT NULL COMMENT 'id',
+  `wi_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'id',
   `wi_nom` varchar(10) NOT NULL COMMENT 'nom',
   `wi_prenom` varchar(10) NOT NULL COMMENT 'prénom',
   `wi_adresse` varchar(50) DEFAULT NULL COMMENT 'adresse postal',
@@ -204,15 +204,16 @@ CREATE TABLE IF NOT EXISTS `waz_users` (
   `wi_d_test_connect` datetime DEFAULT NULL COMMENT 'date de teste de connection si échoué',
   `wi_essai_connect` int(1) NOT NULL DEFAULT 0 COMMENT 'nombre essai connexion',
   `wi_d_reset` datetime DEFAULT NULL COMMENT 'date de reste password',
-  `wi_reset_hash` char(12) DEFAULT NULL COMMENT 'hash reset  mot de passe'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `wi_reset_hash` varchar(255) DEFAULT NULL COMMENT 'hash reset  mot de passe',
+  PRIMARY KEY (`wi_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `waz_users`
 --
 
 INSERT INTO `waz_users` (`wi_id`, `wi_nom`, `wi_prenom`, `wi_adresse`, `wi_cp`, `wi_city`, `wi_tel`, `wi_sexe`, `wi_mail`, `wi_mail_hash`, `wi_mail_confirm`, `wi_role`, `wi_password`, `wi_hash`, `wi_jeton_connect`, `wi_d_create`, `wi_d_connect`, `wi_d_test_connect`, `wi_essai_connect`, `wi_d_reset`, `wi_reset_hash`) VALUES
-(0, 'lefebvre', 'harold', '15 rue marcellin berthelot', 80000, '', 610012548, 'h', 's.lefebvre907@laposte.net', NULL, 1, 0, '$2y$10$AYQitKmzDxFCC4yxI0BxW.0.aSEZqrwkWwS68IU/SVAmqv0eWnx/W', '343830323861373761653866313334623332616136656635', '$2y$10$1BrSu1k.Mc6iqjn22hWlZ.M17qBX0aGYFbtm5vgsNpoXQuYjdHG7G', '2021-03-30 15:47:43', '2021-04-02 09:53:10', NULL, 0, NULL, '86718a6c5a8d');
+(1, 'lefebvre', 'harold', '15 rue marcellin berthelot', 80000, '', 610012548, 'h', 's.lefebvre907@laposte.net', NULL, 1, 0, '$2y$10$BDTjh48mzuc6kDiC0s7lwOK9pJu1raXwc/e9b0vCf.7n4.zJPy4d.', '396461343930613163313137383938626164336237653461', '$2y$10$aXRlNTBRY0ztufgt9Z0Vy.FIcGBzwnmhl8KCz/JNqmaKp9iMsmFke', '2021-03-30 15:47:43', '2021-04-04 10:08:02', NULL, 0, '2021-04-04 10:07:56', NULL);
 
 --
 -- Contraintes pour les tables déchargées
